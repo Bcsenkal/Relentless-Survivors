@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Waypoints : MonoBehaviour
+[CreateAssetMenu(menuName = "Waypoints")]
+public class Waypoints : ScriptableObject
 {
-    [SerializeField] public Transform[] stageOneWaypoints;
+    [SerializeField] public Transform[] waypoints;
 }

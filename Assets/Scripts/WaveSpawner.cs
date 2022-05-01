@@ -6,19 +6,18 @@ public class WaveSpawner : MonoBehaviour
 {
     [SerializeField] private Wave[] waves;
     public int currentWave = 0;
-    private int waveIndex = 0;
     private float spawnInterval = 0.3f;
     private float timeBetweenWaves = 5f;
     private void Start() 
     {
-        StartCoroutine(Spawn(waves[currentWave]));
+       StartCoroutine(Spawn(waves[currentWave]));
     }
 
     private void Update()
     {
 
     }
-    
+    //Single coroutine for all waves
     IEnumerator Spawn(Wave wave)
     {
         for(int i = 0; i < wave.enemyPrefabs.Length; i++)

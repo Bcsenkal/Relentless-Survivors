@@ -4,18 +4,15 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
-    private WaypointManager waypointManager;
     private Vector3[] currentPath;
     private int pathIndex = 0;
     protected float speed = 10f;
+    //Getting reference to waypointmanager on Awake
     void Awake()
     {
-        waypointManager = FindObjectOfType<WaypointManager>();
+        currentPath = WaypointManager.instance.currentPath;
     }
-    void OnEnable()
-    {
-        currentPath = waypointManager.GetCurrentStagePath(GameManager.instance.currentLevel);
-    }
+    //Setting starting position as first position of path array
     void Start()
     {
         transform.position = currentPath[pathIndex];
@@ -26,7 +23,7 @@ public abstract class Enemy : MonoBehaviour
         Move();
         FlipSprite();
     }
-
+    //Move along path waypoints
     private void Move()
     {
         transform.position = Vector2.MoveTowards(transform.position,currentPath[pathIndex], speed * Time.deltaTime);
@@ -39,7 +36,7 @@ public abstract class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    //making sprite to trun according to it's current direction
     private void FlipSprite()
     {
         if(pathIndex < currentPath.Length)

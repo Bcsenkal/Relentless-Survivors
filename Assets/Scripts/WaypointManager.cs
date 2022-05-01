@@ -4,24 +4,26 @@ using UnityEngine;
 
 public class WaypointManager : MonoBehaviour
 {
-    private Waypoints waypointsScript;
+    [SerializeField] private Waypoints[] waypointsObjectArray;
+    [SerializeField] public Vector3[] currentPath{get; private set;}
+    public static WaypointManager instance;
     private void Awake() 
     {
-        waypointsScript = GetComponent<Waypoints>();
-          
+        if(instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+
     }
-    //Calls GetWaypointPositions method by passed stage number and returns that Vector3 array
-    public Vector3[] GetCurrentStagePath(int stage)
+
+    public void SetCurrentPath(int level)
     {
-        if(stage == 1)
-        {
-            return GetWaypointPositions(waypointsScript.stageOneWaypoints);
-        }
-        else
-        {
-            return null;
-        }
+        currentPath = GetWaypointPositions(waypointsObjectArray[level-1].waypoints);
     }
+
     //Creates and returns Vector3 array by passed transform array
     private Vector3[] GetWaypointPositions(Transform[] waypointArray)
     {

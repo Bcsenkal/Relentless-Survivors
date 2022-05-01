@@ -19,14 +19,15 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void SetCurrentLevel(int stage)
+    private void SetCurrentLevel(int level)
     {
-        currentLevel = stage;
+        currentLevel = level;
     }
 
-    public void StartLevel(int stage)
+    public void StartLevel(int level)
     {
-        SetCurrentLevel(stage);
-        SceneManager.LoadScene(stage);
+        SetCurrentLevel(level);
+        WaypointManager.instance.SetCurrentPath(level);
+        SceneManager.LoadScene(level);
     }
 }
