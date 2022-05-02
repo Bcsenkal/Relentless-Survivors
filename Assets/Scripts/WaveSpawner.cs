@@ -5,12 +5,15 @@ using UnityEngine;
 public class WaveSpawner : MonoBehaviour
 {
     [SerializeField] private Wave[] waves;
-    public int currentWave = 0;
-    private float spawnInterval = 0.3f;
+    private int currentWave = 0;
+    private float spawnInterval = 0.7f;
     private float timeBetweenWaves = 5f;
     private void Start() 
     {
-       StartCoroutine(Spawn(waves[currentWave]));
+        if(GameManager.instance.isActive)
+        {
+            StartCoroutine(Spawn(waves[currentWave]));
+        }
     }
 
     private void Update()

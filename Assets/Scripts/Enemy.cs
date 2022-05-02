@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Enemy : MonoBehaviour
+public abstract class Enemy : MonoBehaviour, IFlippable
 {
     private Vector3[] currentPath;
     private int pathIndex = 0;
-    protected float speed = 10f;
+    [SerializeField]protected float speed = 10f;
     //Getting reference to waypointmanager on Awake
     void Awake()
     {
@@ -37,7 +37,7 @@ public abstract class Enemy : MonoBehaviour
         }
     }
     //making sprite to trun according to it's current direction
-    private void FlipSprite()
+    public void FlipSprite()
     {
         if(pathIndex < currentPath.Length)
         {

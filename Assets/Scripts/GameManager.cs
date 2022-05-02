@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] public int currentLevel;
+    public bool isActive;
     public static GameManager instance;
     // Start is called before the first frame update
     void Awake()
@@ -29,5 +30,6 @@ public class GameManager : MonoBehaviour
         SetCurrentLevel(level);
         WaypointManager.instance.SetCurrentPath(level);
         SceneManager.LoadScene(level);
+        isActive = true;
     }
 }
