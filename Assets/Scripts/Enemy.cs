@@ -2,17 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Enemy : MonoBehaviour, IFlippable
+public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
 {
     private Vector3[] currentPath;
     private int pathIndex = 0;
+    [Header("Stats")]
     [SerializeField]protected float speed = 10f;
-    //Getting reference to waypointmanager on Awake
+    [SerializeField]protected float currentHealth;
+    [SerializeField]protected float maxHealth;
+    protected GameObject healthBar;
+    public float CurrentHealth
+    {
+        get{return currentHealth;}
+        set{currentHealth = value;}
+    }
+    public float MaxHealth
+    {
+        get{return maxHealth;} 
+        set{maxHealth = value;}
+    }
     void Awake()
     {
         currentPath = WaypointManager.instance.currentPath;
+        healthBar = transform.GetChild(0).gameObject;
+        CurrentHealth = MaxHealth;
     }
-    //Setting starting position as first position of path array
+
     void Start()
     {
         transform.position = currentPath[pathIndex];
@@ -22,6 +37,7 @@ public abstract class Enemy : MonoBehaviour, IFlippable
     {
         Move();
         FlipSprite();
+        SetHealthBar();
     }
     //Move along path waypoints
     private void Move()
@@ -35,6 +51,22 @@ public abstract class Enemy : MonoBehaviour, IFlippable
         {
             Destroy(gameObject);
         }
+    }
+    public void TakeDamage(float damage)
+    {
+        var nextHealthValue = CurrentHealth - damage;
+        if(nextHealthValue <= 0)
+        {
+            Death();
+        }
+        else
+        {
+            CurrentHealth = nextHealthValue;
+        }
+    }
+    public void Death()
+    {
+        Destroy(gameObject);
     }
     //making sprite to trun according to it's current direction
     public void FlipSprite()
@@ -50,6 +82,9 @@ public abstract class Enemy : MonoBehaviour, IFlippable
                 gameObject.GetComponent<SpriteRenderer>().flipX = false;
             }
         }
-        
+    }
+    public void SetHealthBar()
+    {
+        healthBar.transform.localScale = new Vector3(CurrentHealth/MaxHealth,healthBar.transform.localScale.y,healthBar.transform.localScale.z);
     }
 }

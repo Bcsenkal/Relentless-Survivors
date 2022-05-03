@@ -38,7 +38,7 @@ public class Projectile : MonoBehaviour
         if(other.gameObject == targetToReach)
         {
             Destroy(gameObject);
-            Destroy(other.gameObject);
+            other.gameObject.GetComponent<Enemy>().TakeDamage(tower.Damage);
         }
     }
     private void Lifetime()

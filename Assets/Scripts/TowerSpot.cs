@@ -14,7 +14,7 @@ public class TowerSpot : MonoBehaviour
         if(!hasTower)
         {
             Instantiate(towerPrefabs.Single(t => t.name == name.Replace("(Clone)","") + "Tower"),new Vector2(transform.position.x,transform.position.y),Quaternion.identity);
-            towerType = name.Replace("Clone","");
+            towerType = name.Replace("(Clone)","");
             hasTower = true;
         }
     }

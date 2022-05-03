@@ -33,6 +33,10 @@ public class PointerManager : MonoBehaviour
                     {
                         towerSelector.DefaultSelection();
                     }
+                    else
+                    {
+                        towerSelector.gameObject.Clear();
+                    }
                 }
             }
             else

@@ -7,6 +7,10 @@ public class Tower : MonoBehaviour, IFlippable
     
     [SerializeField] protected float speed;
     [SerializeField] protected int damage;
+    public int Damage
+    {
+        get{return damage;}
+    }
     [SerializeField] protected int range;
     public int Range
     {
@@ -60,6 +64,5 @@ public class Tower : MonoBehaviour, IFlippable
                 gameObject.GetComponent<SpriteRenderer>().flipX = false;
             }
         }
-        
     }
 }
