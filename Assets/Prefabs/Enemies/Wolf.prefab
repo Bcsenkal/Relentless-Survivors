@@ -102,9 +102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba96b9e149358ca4e94dcf37f2e7230f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  value: 3
+  defaultSpeed: 5
   currentHealth: 0
-  maxHealth: 15
+  maxHealth: 10
+  slowDuration: 0
 --- !u!95 &3889143997056473104
 Animator:
   serializedVersion: 4

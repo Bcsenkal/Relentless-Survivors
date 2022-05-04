@@ -5,7 +5,7 @@ using System.Linq;
 
 public class TargetingSystem : MonoBehaviour
 {
-    private int range;
+    private float range;
     private Tower tower;
     public GameObject currentTarget;
     private void Awake()

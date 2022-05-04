@@ -129,11 +129,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6093381581516909727}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9c6e748db718c947a916954fd88a6f1, type: 3}
+  m_Script: {fileID: 11500000, guid: dc05425c4b7e2ff41be2707bf7700e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  damage: 5
+  price: 12
+  speed: 0.6
+  damage: 3
   range: 3
   projectileType: {fileID: 1554868488090210731, guid: 1e96844ec358dfb4dabd1fbf9a5d9816, type: 3}
   attackTimer: 0
