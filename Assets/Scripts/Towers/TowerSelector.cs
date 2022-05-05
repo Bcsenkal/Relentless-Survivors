@@ -19,7 +19,6 @@ public class TowerSelector : MonoBehaviour
     private void OnEnable() 
     {
         gameObject.Clear();
-        Debug.Log("enabled");
     }
     public void RepositionTowerSelector(GameObject spot)
     {

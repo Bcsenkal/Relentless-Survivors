@@ -22,12 +22,10 @@ public class PointerManager : MonoBehaviour
                 if(hit.transform.tag == "TowerSpot")
                 {
                     towerSelector.gameObject.SetActive(false);
-                    Debug.Log("deactivated");
                     towerSelector.currentSpot = hit.transform.gameObject;
                     GameObject currentTower = hit.transform.GetComponent<TowerSpot>().GetCurrentTowerType();
                     towerSelector.RepositionTowerSelector(hit.transform.gameObject);
                     towerSelector.gameObject.SetActive(true);
-                    Debug.Log("Activated");
                     if(currentTower != null)
                     {
                         towerSelector.TowerSelectionDecider(currentTower);

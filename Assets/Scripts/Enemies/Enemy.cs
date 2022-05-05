@@ -6,14 +6,17 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
 {
     private Vector3[] currentPath;
     private int pathIndex = 0;
+    [Header("Death")]
+    [SerializeField]protected GameObject deathEffectPrefab;
+    [SerializeField]protected GameObject deathEffect;
     [Header("Stats")]
     [SerializeField]protected int value;
     [SerializeField]protected float defaultSpeed = 10f;
     protected float currentSpeed;
-    [SerializeField]protected float currentHealth;
+    protected float currentHealth;
     [SerializeField]protected float maxHealth;
     [SerializeField]protected float slowDuration;
-    private float slowMultiplier = 2f;
+    protected float slowMultiplier = 2f;
     protected GameObject healthBar;
     public float CurrentHealth
     {
@@ -32,6 +35,7 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
         healthBar = transform.GetChild(0).gameObject;
         CurrentHealth = MaxHealth;
         currentSpeed = defaultSpeed;
+        CreateDeathEffectObject();
     }
     //Sets current position to starting point of the path
     private void Start()
@@ -43,7 +47,6 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
     {
         Move();
         FlipSprite();
-        SetHealthBar();
         SpeedControl();
     }
     //Move along path waypoints
@@ -71,11 +74,13 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
         else
         {
             CurrentHealth = nextHealthValue;
+            SetHealthBar(nextHealthValue);
         }
     }
 
     public void Death()
     {
+        deathEffect.GetComponent<DeathAnimation>().PlayDeathAnimation();
         Destroy(gameObject);
     }
 
@@ -95,26 +100,26 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
         }
     }
     //Visualizes health amount with color and filling amount
-    public void SetHealthBar()
+    public void SetHealthBar(float health)
     {
-        healthBar.transform.localScale = new Vector3(CurrentHealth/MaxHealth,healthBar.transform.localScale.y,healthBar.transform.localScale.z);
+        healthBar.transform.localScale = new Vector3(health/MaxHealth,healthBar.transform.localScale.y,healthBar.transform.localScale.z);
         SetHealthBarColor();
     }
     //Changes healthbar color according to current health percentage
     public void SetHealthBarColor()
     {
-        SpriteRenderer renderer = healthBar.GetComponent<SpriteRenderer>();
+        
         if(healthBar.transform.localScale.x < 0.34f)
         {
-            renderer.color = Color.red;
+            ColorChanger(Color.red);
         }
         else if(healthBar.transform.localScale.x > 0.67f)
         {
-            renderer.color = Color.green;
+            ColorChanger(Color.green);
         }
         else
         {
-            renderer.color = new Color(1f,0.4647f,0f,1);
+            ColorChanger(new Color(1f,0.4647f,0f,1));
         }
     }
     //Arranges speed
@@ -136,5 +141,17 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
     {
         slowDuration = 5f;
         GetComponent<SpriteRenderer>().color = Color.blue;
+    }
+    
+    private void ColorChanger(Color color)
+    {
+        SpriteRenderer renderer = healthBar.GetComponent<SpriteRenderer>();
+        renderer.color = color;
+    }
+    private void CreateDeathEffectObject()
+    {
+        deathEffect = Instantiate(deathEffectPrefab);
+        deathEffect.transform.SetParent(gameObject.transform);
+        deathEffect.transform.position = transform.position;
     }
 }

@@ -9,10 +9,12 @@ public class PriestTower : AuraTower, IAuraProvider
     public override void ApplyAura(GameObject tower)
     {
         tower.GetComponent<Tower>().Speed /= speedMultiplier;
+        tower.GetComponent<Tower>().currentAuras.Add(gameObject.name);
     }
     
     public override void RemoveAura(GameObject tower)
     {
         tower.GetComponent<Tower>().Speed *= speedMultiplier;
+        tower.GetComponent<Tower>().currentAuras.Remove(gameObject.name);
     }
 }

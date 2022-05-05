@@ -49,7 +49,7 @@ public class Tower : MonoBehaviour, IFlippable
         attackTimer += Time.deltaTime;
         if(currentTarget != null && attackTimer > speed)
         {
-            var projectile = Instantiate(projectileType,new Vector2(transform.position.x,transform.position.y + 1),Quaternion.identity,gameObject.transform);
+            var projectile = Instantiate(projectileType,new Vector2(transform.position.x,transform.position.y + 0.2f),Quaternion.identity,gameObject.transform);
             attackTimer = 0;
         }
     }

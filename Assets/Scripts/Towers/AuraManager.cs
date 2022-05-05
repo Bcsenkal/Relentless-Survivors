@@ -7,7 +7,6 @@ using System.Collections.ObjectModel;
 public class AuraManager : MonoBehaviour
 {
     public List<GameObject> towerList;
-    public List<string> towerNames;
     public static AuraManager instance;
     //clears towerlist on awake for new levels
     private void Awake()
@@ -41,7 +40,7 @@ public class AuraManager : MonoBehaviour
         }
     }
     //Applies current auras to newly created tower, only once.
-    public void ApplyAuraToNewTower(GameObject tower)
+    private void ApplyAuraToNewTower(GameObject tower)
     {
         var currentAuraTowers = towerList.Where(t => t.GetComponent<AuraTower>()).ToArray();
         if(currentAuraTowers.Count() > 0)
@@ -51,21 +50,19 @@ public class AuraManager : MonoBehaviour
                 if(!tower.GetComponent<Tower>().currentAuras.Contains(currentAuraTowers[i].name))
                 {
                     currentAuraTowers[i].GetComponent<AuraTower>().ApplyAura(tower);
-                    tower.GetComponent<Tower>().currentAuras.Add(currentAuraTowers[i].name);
                     break;
                 }
             }
         }
     }
     //Applies Aura Tower's aura to existing towers, only once.
-    public void ApplyAuraToExistingTowers(GameObject tower)
+    private void ApplyAuraToExistingTowers(GameObject tower)
     {
         for(int i = 0; i < towerList.Count(); i++)
         {
             if(!towerList[i].GetComponent<Tower>().currentAuras.Contains(tower.name))
             {
                 tower.GetComponent<AuraTower>().ApplyAura(towerList[i]);
-                towerList[i].GetComponent<Tower>().currentAuras.Add(tower.name);
             }
         }
     }
@@ -78,7 +75,6 @@ public class AuraManager : MonoBehaviour
             for(int i = 0; i < towerList.Count(); i++)
             {
                 tower.GetComponent<AuraTower>().RemoveAura(towerList[i]);
-                towerList[i].GetComponent<Tower>().currentAuras.Remove(tower.name);
             }
         }
     }
