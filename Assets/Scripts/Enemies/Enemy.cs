@@ -10,24 +10,26 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
     [SerializeField]protected GameObject deathEffectPrefab;
     [SerializeField]protected GameObject deathEffect;
     [Header("Stats")]
-    [SerializeField]protected int value;
+    [SerializeField]protected int killValue;
     [SerializeField]protected float defaultSpeed = 10f;
     protected float currentSpeed;
     protected float currentHealth;
-    [SerializeField]protected float maxHealth;
-    [SerializeField]protected float slowDuration;
-    protected float slowMultiplier = 2f;
-    protected GameObject healthBar;
     public float CurrentHealth
     {
         get{return currentHealth;}
         set{currentHealth = value;}
     }
+    [SerializeField]protected float maxHealth;
     public float MaxHealth
     {
         get{return maxHealth;} 
         set{maxHealth = value;}
     }
+    [SerializeField]protected float slowDuration;
+    protected float slowMultiplier = 2f;
+    protected GameObject healthBar;
+    
+    
     //Gets current path info from WaypointManager, healhbar child to visualize damage
     private void Awake()
     {
@@ -69,7 +71,7 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
         if(nextHealthValue <= 0)
         {
             Death();
-            UIManager.instance.AddCoin(value);
+            FindObjectOfType<GameUI>().AddCoin(killValue);
         }
         else
         {

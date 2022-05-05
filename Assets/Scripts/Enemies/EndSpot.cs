@@ -9,7 +9,7 @@ public class EndSpot : MonoBehaviour
         if(other.gameObject.TryGetComponent<Enemy>(out Enemy enemy))
         {
             Destroy(other.gameObject);
-            UIManager.instance.CheckRemainingLives();
+            FindObjectOfType<GameUI>().CheckRemainingLives();
         }
     }
 }

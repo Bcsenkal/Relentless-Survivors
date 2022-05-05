@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class ButtonBase : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class ButtonBase : MonoBehaviour
     protected virtual void Awake()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(delegate {DisableSelectorOnClick();});
+        gameObject.AddComponent<EventTrigger>();
     }
 
     protected virtual void Update()

@@ -5,12 +5,19 @@ using UnityEngine.EventSystems;
 
 public class PointerManager : MonoBehaviour
 {
-    [SerializeField] private TowerSelector towerSelector;
-    
+    private TowerSelector towerSelector;
+    public TowerSelector TowerSelector
+    {
+        get{return towerSelector;}
+        set{towerSelector = value;}
+    }
+    private void Awake() 
+    {
+        FindObjectOfType<GameUI>().AttachTowerSelector();
+    }
     void Update()
     {
-        Click();
-        
+        Click(); 
     }
     private void Click()
     {

@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] public int currentLevel;
-    public bool isActive;
+    [SerializeField]private Canvas gameCanvas;
+    [SerializeField]private Canvas menuCanvas;
+
     public static GameManager instance;
-    // Start is called before the first frame update
-    void Awake()
+    private void Awake() 
     {
         if(instance != null)
         {
@@ -18,18 +20,24 @@ public class GameManager : MonoBehaviour
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
+        ActivateMenuCanvas();
+        
     }
 
-    private void SetCurrentLevel(int level)
+    public void ActivateGameCanvas()
+    {     
+        gameCanvas.gameObject.SetActive(true);
+        menuCanvas.gameObject.SetActive(false);
+    }
+    public void ActivateMenuCanvas()
     {
-        currentLevel = level;
+        menuCanvas.gameObject.SetActive(true);
+        gameCanvas.gameObject.SetActive(false);
     }
 
-    public void StartLevel(int level)
+    public void ReturnMenu()
     {
-        SetCurrentLevel(level);
-        WaypointManager.instance.SetCurrentPath(level);
-        SceneManager.LoadScene(level);
-        isActive = true;
+        SceneManager.LoadScene(0);
+        ActivateMenuCanvas();
     }
 }

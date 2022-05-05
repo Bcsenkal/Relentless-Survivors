@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class SellButton : ButtonBase
 {
-    private UIManager manager;
+    private GameUI gameUI;
     protected override void Awake()
     {
-        manager = UIManager.instance;
+        gameUI = FindObjectOfType<GameUI>();
         GetComponent<Button>().onClick.AddListener(delegate{SellTower();});
         base.Awake();
     }
@@ -16,8 +16,8 @@ public class SellButton : ButtonBase
     private void SellTower()
     {
         var currentTower = currentSpot.GetComponent<TowerSpot>().GetCurrentTowerType();
-        manager.AddCoin(currentTower.GetComponent<Tower>().Price / 2);
-        AuraManager.instance.RemoveTower(currentTower);
+        gameUI.AddCoin(currentTower.GetComponent<Tower>().Price / 2);
+        AuraManager.RemoveTower(currentTower);
         Destroy(currentTower.gameObject);
         
     }

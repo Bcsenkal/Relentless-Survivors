@@ -2,28 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using System.Collections.ObjectModel;
 
-public class AuraManager : MonoBehaviour
+public static class AuraManager
 {
-    public List<GameObject> towerList;
-    public static AuraManager instance;
-    //clears towerlist on awake for new levels
-    private void Awake()
+    public static List<GameObject> towerList;
+    static AuraManager()
     {
-        if(instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        instance = this;
-        DontDestroyOnLoad(gameObject);
-        towerList.Clear();
+        towerList = new List<GameObject>();
     }
+    //clears towerlist on awake for new levels
     //Adds tower
-    public void AddTower(GameObject tower)
+    public static void AddTower(GameObject tower)
     {
         towerList.Add(tower);
+        Debug.Log(towerList.Count());
         ApplyAuraToNewTower(tower);
         if(tower.GetComponent<Tower>().IsAuraProvider)
         {
@@ -31,7 +23,7 @@ public class AuraManager : MonoBehaviour
         }
     }
     //Removes tower
-    public void RemoveTower(GameObject tower)
+    public static void RemoveTower(GameObject tower)
     {
         towerList.Remove(tower);
         if(tower.GetComponent<Tower>().IsAuraProvider)
@@ -40,7 +32,7 @@ public class AuraManager : MonoBehaviour
         }
     }
     //Applies current auras to newly created tower, only once.
-    private void ApplyAuraToNewTower(GameObject tower)
+    private static void ApplyAuraToNewTower(GameObject tower)
     {
         var currentAuraTowers = towerList.Where(t => t.GetComponent<AuraTower>()).ToArray();
         if(currentAuraTowers.Count() > 0)
@@ -56,7 +48,7 @@ public class AuraManager : MonoBehaviour
         }
     }
     //Applies Aura Tower's aura to existing towers, only once.
-    private void ApplyAuraToExistingTowers(GameObject tower)
+    private static void ApplyAuraToExistingTowers(GameObject tower)
     {
         for(int i = 0; i < towerList.Count(); i++)
         {
@@ -67,7 +59,7 @@ public class AuraManager : MonoBehaviour
         }
     }
     //Checks if it's the last aura tower of the same type
-    private void RemoveAuraIfNoneExists(GameObject tower)
+    private static void RemoveAuraIfNoneExists(GameObject tower)
     {
         var activeTowers = towerList.Where(t => t.name == tower.name).ToArray();
         if(activeTowers.Count() == 0)
@@ -77,5 +69,9 @@ public class AuraManager : MonoBehaviour
                 tower.GetComponent<AuraTower>().RemoveAura(towerList[i]);
             }
         }
+    }
+    public static void ClearTowerList()
+    {
+        towerList.Clear();
     }
 }

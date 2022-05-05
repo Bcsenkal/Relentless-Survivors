@@ -1,28 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.SceneManagement;
 
-public class UIManager : MonoBehaviour
+public class GameUI : MonoBehaviour
 {
+    [SerializeField]private int currentCoin;
+    [SerializeField]private int maxLife = 10;
     [SerializeField]private TextMeshProUGUI coinText;
     [SerializeField]private GameObject heartContainer;
     [SerializeField]private GameObject heartObject;
-    [SerializeField]private int currentCoin;
-    [SerializeField]private int maxLife = 10;
-    public static UIManager instance;
-    private void Awake() 
-    {
-        if(instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
+    [SerializeField]private TowerSelector towerSelector;
     private void Start() 
     {
         currentCoin = 500;
@@ -90,5 +79,10 @@ public class UIManager : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
+    }
+
+    public void AttachTowerSelector()
+    {
+        GameObject.Find("PointerManager").GetComponent<PointerManager>().TowerSelector = towerSelector;
     }
 }
