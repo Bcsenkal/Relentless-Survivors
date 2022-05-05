@@ -11,9 +11,10 @@ public class PointerManager : MonoBehaviour
         get{return towerSelector;}
         set{towerSelector = value;}
     }
-    private void Awake() 
+    private void Start() 
     {
         FindObjectOfType<GameUI>().AttachTowerSelector();
+        GameManager.instance.gameUI.ResetValuesOnNewLevel();
     }
     void Update()
     {
@@ -28,25 +29,25 @@ public class PointerManager : MonoBehaviour
             {
                 if(hit.transform.tag == "TowerSpot")
                 {
-                    towerSelector.gameObject.SetActive(false);
-                    towerSelector.currentSpot = hit.transform.gameObject;
+                    TowerSelector.gameObject.SetActive(false);
+                    TowerSelector.currentSpot = hit.transform.gameObject;
                     GameObject currentTower = hit.transform.GetComponent<TowerSpot>().GetCurrentTowerType();
-                    towerSelector.RepositionTowerSelector(hit.transform.gameObject);
-                    towerSelector.gameObject.SetActive(true);
+                    TowerSelector.RepositionTowerSelector(hit.transform.gameObject);
+                    TowerSelector.gameObject.SetActive(true);
                     if(currentTower != null)
                     {
-                        towerSelector.TowerSelectionDecider(currentTower);
+                        TowerSelector.TowerSelectionDecider(currentTower);
                     }
                     else
                     {
-                        towerSelector.DefaultTowerSelection();
+                        TowerSelector.DefaultTowerSelection();
                     }
                 }
             }
             else
             {
-                towerSelector.gameObject.Clear();
-                towerSelector.gameObject.SetActive(false);
+                TowerSelector.gameObject.Clear();
+                TowerSelector.gameObject.SetActive(false);
             }
         }
     }

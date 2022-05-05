@@ -10,12 +10,12 @@ public class Projectile : MonoBehaviour
     [SerializeField]private float projectileLifetime;
     [SerializeField]private bool canSlow;
     private float lifetimeTimer;
-    void Awake()
+    
+    private void Awake() 
     {
         tower = GetComponentInParent<Tower>();
         targetToReach = tower.GetCurrentTarget();
     }
-
     // Update is called once per frame
     void Update()
     {

@@ -8,11 +8,12 @@ public class GameUI : MonoBehaviour
 {
     [SerializeField]private int currentCoin;
     [SerializeField]private int maxLife = 10;
+    [SerializeField]private int currentLife;
     [SerializeField]private TextMeshProUGUI coinText;
     [SerializeField]private GameObject heartContainer;
-    [SerializeField]private GameObject heartObject;
     [SerializeField]private TowerSelector towerSelector;
-    private void Start() 
+
+    public void ResetValuesOnNewLevel()
     {
         currentCoin = 500;
         UpdateCoinText();
@@ -44,40 +45,41 @@ public class GameUI : MonoBehaviour
     {
         for(int i = 0; i < maxLife; i++)
         {
-            var container = Instantiate(heartObject);
-            container.transform.SetParent(heartContainer.transform);
-            container.transform.localScale = new Vector3(1,1,1);
+            heartContainer.transform.GetChild(i).gameObject.SetActive(true);
         }
     }
-    //Every 5 level gonna be "Hard" level so gives player 10 life instead of 5;
+    //Every 5 level gonna be "Hard" level so gives player 12 life instead of 6;
     public void SetMaxLife()
     {
-        var currentLevel = (SceneManager.GetActiveScene().buildIndex + 1);
+        var currentLevel = (SceneManager.GetActiveScene().buildIndex);
+        
         if(currentLevel % 5 == 0)
         {
-            maxLife = 10;
+            maxLife = 12;
         }
         else
         {
-            maxLife = 5;
+            maxLife = 6;
         }
+        currentLife = maxLife;
     }
 
     public void RemoveLife()
     {
-        Destroy(heartContainer.transform.GetChild(heartContainer.transform.childCount -1).gameObject);
+        heartContainer.transform.GetChild(currentLife - 1).gameObject.SetActive(false);
+        currentLife --;
     }
     
     public void CheckRemainingLives()
     {
-        var nextLives = heartContainer.transform.childCount -1;
+        var nextLives = currentLife -1;
         if(nextLives > 0)
         {
             RemoveLife();
         }
         else
         {
-            SceneManager.LoadScene(0);
+            GameManager.instance.ReturnMenu();
         }
     }
 

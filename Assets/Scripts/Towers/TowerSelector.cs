@@ -7,15 +7,14 @@ using System.Linq;
 
 public class TowerSelector : MonoBehaviour
 {
-    [SerializeField] private List<Button> defaultTowerButtons;
-    [SerializeField] private List<Button> archerTowerUpgradeButtons;
-    [SerializeField] private List<Button> mageTowerUpgradeButtons;
-    [SerializeField] private List<Button> warriorTowerUpgradeButtons;
-    [SerializeField] private List<Button> acolyteTowerUpgradeButtons;
-    [SerializeField] private Button sellButton;
     [SerializeField] public GameObject currentSpot;
     [SerializeField] private float windowOffsetY = 1.5f;
-
+    [SerializeField] private GameObject defaultSelection;
+    [SerializeField] private GameObject archerSelection;
+    [SerializeField] private GameObject mageSelection;
+    [SerializeField] private GameObject acolyteSelection;
+    [SerializeField] private GameObject warriorSelection;
+    [SerializeField] private GameObject sellButton;
     private void OnEnable() 
     {
         gameObject.Clear();
@@ -23,19 +22,13 @@ public class TowerSelector : MonoBehaviour
     public void RepositionTowerSelector(GameObject spot)
     {
         var screenPos = Camera.main.WorldToScreenPoint(new Vector2(spot.transform.position.x,spot.transform.position.y + windowOffsetY));
-        transform.position = new Vector2(screenPos.x, (screenPos.y + 2f));
+        transform.position = new Vector2(screenPos.x, (screenPos.y));
     }
 
-    public void CreateTowerSelection(List<Button> buttonList)
+    public void CreateTowerSelection(GameObject buttonList)
     {
-        for(int i = 0; i < buttonList.Count; i++)
-        {
-            CreateButton(buttonList[i]);
-        }
-        if(currentSpot.GetComponent<TowerSpot>().GetCurrentTowerType() != null)
-        {
-            CreateButton(sellButton);
-        }
+        buttonList.SetActive(true);
+        
     }
     public void TowerSelectionDecider(GameObject tower)
     {
@@ -43,29 +36,24 @@ public class TowerSelector : MonoBehaviour
         switch (name)
         {
             case "Archer":
-                CreateTowerSelection(archerTowerUpgradeButtons);
+                CreateTowerSelection(archerSelection);
                 break;
             case "Mage":
-                CreateTowerSelection(mageTowerUpgradeButtons);
+                CreateTowerSelection(mageSelection);
                 break;
             case "Warrior":
-                CreateTowerSelection(warriorTowerUpgradeButtons);
+                CreateTowerSelection(warriorSelection);
                 break;
             case "Acolyte":
-                CreateTowerSelection(acolyteTowerUpgradeButtons);
+                CreateTowerSelection(acolyteSelection);
                 break;
             default:
-                CreateButton(sellButton);
+                sellButton.gameObject.SetActive(true);
                 break;
         }
     }
     public void DefaultTowerSelection()
     {
-        CreateTowerSelection(defaultTowerButtons);
-    }
-    public void CreateButton(Button button)
-    {
-        var currentButton = Instantiate(button);
-        currentButton.transform.SetParent(this.gameObject.transform);
+        CreateTowerSelection(defaultSelection);
     }
 }

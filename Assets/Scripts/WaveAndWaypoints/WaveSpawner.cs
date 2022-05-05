@@ -11,7 +11,7 @@ public class WaveSpawner : MonoBehaviour
     private float initialDelay = 3f;
     private void Start()
     {
-        Invoke("SpawnFirstWave",initialDelay);
+        //Invoke("SpawnFirstWave",initialDelay);
     }
     //Single coroutine for all waves
     IEnumerator Spawn(Wave wave)

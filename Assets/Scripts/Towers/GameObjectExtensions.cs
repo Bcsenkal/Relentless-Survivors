@@ -9,7 +9,7 @@ static public class GameObjectExtensions
     {
         for(int i = gameobject.transform.childCount - 1; i >= 0; i--)
         {
-            GameObject.Destroy(gameobject.transform.GetChild(i).gameObject);
+            gameobject.transform.GetChild(i).gameObject.SetActive(false);
         }
     }
 }

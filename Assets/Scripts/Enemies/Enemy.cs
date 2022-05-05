@@ -43,6 +43,7 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
     private void Start()
     {
         transform.position = currentPath[pathIndex];
+        SetHealthBarColor();
     }
     
     private void Update()
@@ -76,7 +77,7 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
         else
         {
             CurrentHealth = nextHealthValue;
-            SetHealthBar(nextHealthValue);
+            SetHealthBar(CurrentHealth);
         }
     }
 

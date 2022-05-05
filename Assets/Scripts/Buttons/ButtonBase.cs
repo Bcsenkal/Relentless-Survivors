@@ -8,10 +8,11 @@ public class ButtonBase : MonoBehaviour
 {
     protected GameObject towerSelector;
     protected GameObject currentSpot;
+    [SerializeField]public PointerEventData eventData;
     protected virtual void Awake()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(delegate {DisableSelectorOnClick();});
-        gameObject.AddComponent<EventTrigger>();
+        gameObject.GetComponent<EventTrigger>();
     }
 
     protected virtual void Update()
@@ -26,7 +27,7 @@ public class ButtonBase : MonoBehaviour
     
     void DisableSelectorOnClick()
     {
-        towerSelector = transform.parent.gameObject;
+        towerSelector = transform.parent.gameObject.transform.parent.gameObject;
         towerSelector.gameObject.SetActive(false);
     }
 }

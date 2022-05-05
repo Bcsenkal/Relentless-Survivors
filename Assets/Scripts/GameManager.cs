@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]private Canvas gameCanvas;
     [SerializeField]private Canvas menuCanvas;
+    [SerializeField]public GameUI gameUI;
 
     public static GameManager instance;
     private void Awake() 
@@ -21,7 +22,6 @@ public class GameManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
         ActivateMenuCanvas();
-        
     }
 
     public void ActivateGameCanvas()
@@ -35,6 +35,14 @@ public class GameManager : MonoBehaviour
         gameCanvas.gameObject.SetActive(false);
     }
 
+    public void StartLevel(int level)
+    {
+        WaypointManager.instance.SetCurrentPath(level);
+        SceneManager.LoadScene(level);
+        GameManager.instance.ActivateGameCanvas();
+        AuraManager.ClearTowerList();
+    }
+    
     public void ReturnMenu()
     {
         SceneManager.LoadScene(0);
