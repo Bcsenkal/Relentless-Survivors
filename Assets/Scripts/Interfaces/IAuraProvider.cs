@@ -4,6 +4,7 @@ using UnityEngine;
 
 public interface IAuraProvider
 {
-    void ApplyAura(GameObject tower);
-    void RemoveAura(GameObject tower);
+    public string AuraType{get;}
+    void ApplyAura(ITower tower);
+    void RemoveAura(ITower tower);
 }

@@ -24,16 +24,16 @@ public class TowerSelectorButton : ButtonBase
     //Builds tower and destroys existing if there's one
     private void BuildTower()
     {
-        var currentTower = currentSpot.GetComponent<TowerSpot>().GetCurrentTowerType();
+        GameObject currentTower = currentSpot.GetComponent<TowerSpot>().GetCurrentTowerType();
         if(currentTower != null)
         {
             Destroy(currentTower);
-            AuraManager.RemoveTower(currentTower);
+            AuraManager.RemoveTower((ITower)currentTower.GetComponent<Tower>());
         }
         var buildingTower = Instantiate(towerPrefab,currentSpot.transform.position,Quaternion.identity);
         currentSpot.GetComponent<TowerSpot>().SetCurrentTowerType(buildingTower);
         gameUI.SpendCoin(tower.Price);
-        AuraManager.AddTower(buildingTower);
+        AuraManager.AddTower((ITower)buildingTower.GetComponent<Tower>());
     }
     //Pricecheck for tower purchase
     private void PriceCheck()

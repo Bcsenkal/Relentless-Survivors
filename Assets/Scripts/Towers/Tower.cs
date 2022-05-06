@@ -2,9 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tower : MonoBehaviour, IFlippable
+public class Tower : MonoBehaviour, IFlippable, ITower
 {
-    [SerializeField] public List<string> currentAuras;
+    [SerializeField] protected List<string> currentAuras;
+    public List<string> CurrentAuras
+    {
+        get{return currentAuras;}
+        set{currentAuras = value;}
+    }
     [SerializeField] protected int price;
     public int Price
     {
@@ -28,7 +33,16 @@ public class Tower : MonoBehaviour, IFlippable
         set{range = value;}
     }
     [SerializeField] protected GameObject projectileType;
+    public GameObject ProjectileType
+    {
+        get{return projectileType;}
+    }
     [SerializeField] protected float attackTimer;
+    public float AttackTimer
+    {
+        get{return attackTimer;}
+        set{attackTimer = value;}
+    }
     [SerializeField] protected bool isAuraProvider;
     public bool IsAuraProvider
     {
@@ -37,22 +51,21 @@ public class Tower : MonoBehaviour, IFlippable
     }
     protected float auraSpeedMultiplier = 1.4f;
     protected GameObject currentTarget;
-
     protected virtual void Update() 
     {
         FlipSprite();
         Attack();
     }
     //Attacks with interval
-    protected virtual void Attack()
+    public virtual void Attack()
     {
-        attackTimer += Time.deltaTime;
-        if(currentTarget != null && attackTimer > speed)
+        AttackTimer += Time.deltaTime;
+        if(currentTarget != null && AttackTimer > Speed)
         {
-            var projectile = Instantiate(projectileType,new Vector2(transform.position.x,transform.position.y + 0.2f),Quaternion.identity,gameObject.transform);
+            var projectile = Instantiate(ProjectileType,new Vector2(transform.position.x,transform.position.y + 0.2f),Quaternion.identity,gameObject.transform);
             projectile.GetComponent<Projectile>().TargetToReach = currentTarget;
             projectile.GetComponent<Projectile>().Damage = Damage;
-            attackTimer = 0;
+            AttackTimer = 0;
         }
     }
     //Sets current target
@@ -68,7 +81,7 @@ public class Tower : MonoBehaviour, IFlippable
 
     private void OnDrawGizmosSelected() 
     {
-        Gizmos.DrawWireSphere(transform.position,range); 
+        Gizmos.DrawWireSphere(transform.position,Range); 
     }
     //Flips sprite to attacking direction
     public void FlipSprite()

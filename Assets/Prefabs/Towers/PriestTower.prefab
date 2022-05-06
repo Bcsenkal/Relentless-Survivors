@@ -132,6 +132,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2250549529f2d5f4a96afede90c316e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerObject: {fileID: 0}
+  towerName: 
+  currentAuras: []
   price: 45
   speed: 1
   damage: 2
@@ -139,4 +142,5 @@ MonoBehaviour:
   projectileType: {fileID: 1554868488090210731, guid: f45621c901c3c9f47be2b424b3648c85, type: 3}
   attackTimer: 0
   isAuraProvider: 1
+  auraType: Speed
   speedMultiplier: 1.5

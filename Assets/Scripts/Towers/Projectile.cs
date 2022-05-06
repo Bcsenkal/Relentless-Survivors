@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
     private GameObject targetToReach;
     public GameObject TargetToReach
     {
-        get{return targetToReach;}
+        get{return targetToReach;} 
         set{targetToReach = value;}
     }
     [SerializeField]private float speed = 3f;

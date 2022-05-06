@@ -6,15 +6,15 @@ public class PriestTower : AuraTower, IAuraProvider
 {
     [SerializeField] private float speedMultiplier;
 
-    public override void ApplyAura(GameObject tower)
+    public override void ApplyAura(ITower tower)
     {
-        tower.GetComponent<Tower>().Speed /= speedMultiplier;
+        tower.Speed /= speedMultiplier;
         base.ApplyAura(tower);
     }
     
-    public override void RemoveAura(GameObject tower)
+    public override void RemoveAura(ITower tower)
     {
-        tower.GetComponent<Tower>().Speed *= speedMultiplier;
+        tower.Speed *= speedMultiplier;
         base.RemoveAura(tower);
     }
 }

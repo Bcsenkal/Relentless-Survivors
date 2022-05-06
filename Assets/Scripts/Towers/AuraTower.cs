@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class AuraTower : Tower, IAuraProvider
 {
-    public virtual void ApplyAura(GameObject tower)
+    [SerializeField]protected string auraType;
+    public string AuraType
     {
-        tower.GetComponent<Tower>().currentAuras.Add(gameObject.name);
+        get{return auraType;}
+        set{auraType = value;}
     }
-    public virtual void RemoveAura(GameObject tower)
+    public virtual void ApplyAura(ITower tower)
     {
-        tower.GetComponent<Tower>().currentAuras.Remove(gameObject.name);
+        tower.CurrentAuras.Add(gameObject.name);
+    }
+    public virtual void RemoveAura(ITower tower)
+    {
+        tower.CurrentAuras.Remove(gameObject.name);
     }
 }

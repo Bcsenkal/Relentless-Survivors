@@ -16,13 +16,13 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
     protected float currentHealth;
     public float CurrentHealth
     {
-        get{return currentHealth;}
+        get{return currentHealth;} 
         set{currentHealth = value;}
     }
     [SerializeField]protected float maxHealth;
     public float MaxHealth
     {
-        get{return maxHealth;} 
+        get{return maxHealth;}
         set{maxHealth = value;}
     }
     [SerializeField]protected float slowDuration;

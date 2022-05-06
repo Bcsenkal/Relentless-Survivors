@@ -5,73 +5,82 @@ using System.Linq;
 
 public static class AuraManager
 {
-    public static List<GameObject> towerList;
+    public static List<ITower> towerList;
+    public static List<IAuraProvider> auraTowerList;
     static AuraManager()
     {
-        towerList = new List<GameObject>();
+        towerList = new List<ITower>();
+        auraTowerList = new List<IAuraProvider>();
     }
     //clears towerlist on awake for new levels
     //Adds tower
-    public static void AddTower(GameObject tower)
+    public static void AddTower(ITower tower)
     {
         towerList.Add(tower);
         Debug.Log(towerList.Count());
-        ApplyAuraToNewTower(tower);
-        if(tower.GetComponent<Tower>().IsAuraProvider)
+        Debug.Log(auraTowerList.Count());
+        ApplyAurasToNewTower(tower);
+        if(tower.IsAuraProvider)
         {
-            ApplyAuraToExistingTowers(tower);
+            AddAuraTower((IAuraProvider)tower);
+            
         }
     }
     //Removes tower
-    public static void RemoveTower(GameObject tower)
+    public static void RemoveTower(ITower tower)
     {
         towerList.Remove(tower);
-        if(tower.GetComponent<Tower>().IsAuraProvider)
+        if(tower.IsAuraProvider)
         {
-            RemoveAuraIfNoneExists(tower);
+            RemoveAuraIfNoneExists((IAuraProvider)tower);
+            auraTowerList.Remove((IAuraProvider)tower);
         }
     }
     //Applies current auras to newly created tower, only once.
-    private static void ApplyAuraToNewTower(GameObject tower)
+    private static void ApplyAurasToNewTower(ITower tower)
     {
-        var currentAuraTowers = towerList.Where(t => t.GetComponent<AuraTower>()).ToArray();
-        if(currentAuraTowers.Count() > 0)
+        if(auraTowerList.Count() > 0)
         {
-            for(int i = 0; i < currentAuraTowers.Count(); i++)
+            for(int i = 0; i < auraTowerList.Count(); i++)
             {
-                if(!tower.GetComponent<Tower>().currentAuras.Contains(currentAuraTowers[i].name))
-                {
-                    currentAuraTowers[i].GetComponent<AuraTower>().ApplyAura(tower);
-                    break;
-                }
+                auraTowerList[i].ApplyAura(tower);
             }
         }
     }
     //Applies Aura Tower's aura to existing towers, only once.
-    private static void ApplyAuraToExistingTowers(GameObject tower)
+    private static void ApplyAuraToExistingTowers(IAuraProvider tower)
     {
-        for(int i = 0; i < towerList.Count(); i++)
-        {
-            if(!towerList[i].GetComponent<Tower>().currentAuras.Contains(tower.name))
-            {
-                tower.GetComponent<AuraTower>().ApplyAura(towerList[i]);
-            }
-        }
-    }
-    //Checks if it's the last aura tower of the same type
-    private static void RemoveAuraIfNoneExists(GameObject tower)
-    {
-        var activeTowers = towerList.Where(t => t.name == tower.name).ToArray();
-        if(activeTowers.Count() == 0)
+        if(auraTowerList.Count() > 0)
         {
             for(int i = 0; i < towerList.Count(); i++)
             {
-                tower.GetComponent<AuraTower>().RemoveAura(towerList[i]);
+                tower.ApplyAura(towerList[i]);
+            }
+        }
+        
+    }
+    //Checks if it's the last aura tower of the same type
+    private static void RemoveAuraIfNoneExists(IAuraProvider tower)
+    {
+        if(!auraTowerList.Contains(tower))
+        {
+            for(int i = 0; i < towerList.Count(); i++)
+            {
+                tower.RemoveAura(towerList[i]);
             }
         }
     }
     public static void ClearTowerList()
     {
         towerList.Clear();
+        auraTowerList.Clear();
+    }
+    public static void AddAuraTower(IAuraProvider auraTower)
+    {
+        if((auraTowerList.Where(t => t.AuraType == auraTower.AuraType).Count() == 0))
+        {
+            auraTowerList.Add(auraTower);
+            ApplyAuraToExistingTowers(auraTower);
+        }
     }
 }

@@ -17,8 +17,8 @@ public class SellButton : ButtonBase
     {
         var currentTower = currentSpot.GetComponent<TowerSpot>().GetCurrentTowerType();
         gameUI.AddCoin(currentTower.GetComponent<Tower>().Price / 2);
-        AuraManager.RemoveTower(currentTower);
-        Destroy(currentTower.gameObject);
+        AuraManager.RemoveTower((ITower)currentTower.GetComponent<Tower>());
+        Destroy(currentTower);
         
     }
 }
