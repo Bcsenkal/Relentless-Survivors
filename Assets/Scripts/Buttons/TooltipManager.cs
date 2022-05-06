@@ -16,6 +16,7 @@ public class TooltipManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI tooltipRangeText;
     [SerializeField] private TextMeshProUGUI tooltipBuffInfoText;
     [SerializeField] private Vector3 offset;
+
     public void ShowTooltip(TowerData button)
     {
         tooltip.gameObject.SetActive(true);
@@ -27,6 +28,7 @@ public class TooltipManager : MonoBehaviour
         tooltipRangeText.text = button.towerRange.ToString();
         tooltipBuffInfoText.text = button.buffInfo;
     }
+    
     public void HideTooltip()
     {
         tooltip.gameObject.SetActive(false);

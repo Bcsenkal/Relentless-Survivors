@@ -8,6 +8,7 @@ public class TowerSelectorButton : ButtonBase
     [SerializeField]private GameObject towerPrefab;
     private GameUI gameUI;
     private Tower tower;
+    
     protected override void Awake()
     {
         tower = towerPrefab.GetComponent<Tower>();

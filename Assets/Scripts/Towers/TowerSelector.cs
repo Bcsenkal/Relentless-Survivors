@@ -19,6 +19,7 @@ public class TowerSelector : MonoBehaviour
     {
         gameObject.Clear();
     }
+
     public void RepositionTowerSelector(GameObject spot)
     {
         var screenPos = Camera.main.WorldToScreenPoint(new Vector2(spot.transform.position.x,spot.transform.position.y + windowOffsetY));
@@ -28,8 +29,8 @@ public class TowerSelector : MonoBehaviour
     public void CreateTowerSelection(GameObject buttonList)
     {
         buttonList.SetActive(true);
-        
     }
+
     public void TowerSelectionDecider(GameObject tower)
     {
         var name = tower.name.Replace("Tower(Clone)","");
@@ -52,6 +53,7 @@ public class TowerSelector : MonoBehaviour
                 break;
         }
     }
+    
     public void DefaultTowerSelection()
     {
         CreateTowerSelection(defaultSelection);

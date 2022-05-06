@@ -10,10 +10,12 @@ public class AuraTower : Tower, IAuraProvider
         get{return auraType;}
         set{auraType = value;}
     }
+
     public virtual void ApplyAura(ITower tower)
     {
         tower.CurrentAuras.Add(gameObject.name);
     }
+    
     public virtual void RemoveAura(ITower tower)
     {
         tower.CurrentAuras.Remove(gameObject.name);

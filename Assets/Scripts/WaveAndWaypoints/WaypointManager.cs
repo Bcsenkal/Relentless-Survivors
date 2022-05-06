@@ -16,14 +16,12 @@ public class WaypointManager : MonoBehaviour
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
-
     }
 
     public void SetCurrentPath(int level)
     {
         currentPath = GetWaypointPositions(waypointsObjectArray[level-1].waypoints);
     }
-
     //Creates and returns Vector3 array by passed transform array
     private Vector3[] GetWaypointPositions(Transform[] waypointArray)
     {

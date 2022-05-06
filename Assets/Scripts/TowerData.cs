@@ -11,5 +11,4 @@ public class TowerData : ScriptableObject
     public int towerDamage;
     public float towerRange;
     public string buffInfo;
-    
 }

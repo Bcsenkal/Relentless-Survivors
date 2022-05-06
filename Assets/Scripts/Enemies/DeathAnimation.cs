@@ -9,6 +9,7 @@ public class DeathAnimation : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
+    
     public void PlayDeathAnimation()
     {
         gameObject.transform.SetParent(null);

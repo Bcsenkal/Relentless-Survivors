@@ -8,6 +8,7 @@ public class TargetingSystem : MonoBehaviour
     private float range;
     private Tower tower;
     public GameObject currentTarget;
+    
     private void Awake()
     {
         tower = GetComponent<Tower>();

@@ -25,16 +25,18 @@ public class GameUI : MonoBehaviour
     {
         coinText.text = currentCoin.ToString();
     }
+
     public void AddCoin(int value)
     {
         currentCoin += value;
         UpdateCoinText();
     }
+
     public int GetCurrentCoin()
     {
         return currentCoin;
     }
-
+    
     public void SpendCoin(int value)
     {
         currentCoin -= value;
@@ -83,8 +85,8 @@ public class GameUI : MonoBehaviour
         }
     }
 
-    public void AttachTowerSelector()
+    public TowerSelector AttachTowerSelector()
     {
-        GameObject.Find("PointerManager").GetComponent<PointerManager>().TowerSelector = towerSelector;
+        return towerSelector;
     }
 }

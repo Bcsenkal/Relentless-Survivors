@@ -9,6 +9,7 @@ public class WaveSpawner : MonoBehaviour
     private float spawnInterval = 0.7f;
     private float timeBetweenWaves = 8f;
     private float initialDelay = 3f;
+    
     private void Start()
     {
         Invoke("SpawnFirstWave",initialDelay);

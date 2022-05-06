@@ -11,14 +11,17 @@ public class PointerManager : MonoBehaviour
         get{return towerSelector;}
         set{towerSelector = value;}
     }
+
     private void Start() 
     {
-        FindObjectOfType<GameUI>().AttachTowerSelector();
+        TowerSelector = FindObjectOfType<GameUI>().AttachTowerSelector();
     }
+
     void Update()
     {
         Click(); 
     }
+
     private void Click()
     {
         if(Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
@@ -50,6 +53,7 @@ public class PointerManager : MonoBehaviour
             }
         }
     }
+    
     private RaycastHit2D GetRaycastHit()
     {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

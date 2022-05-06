@@ -28,8 +28,6 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
     [SerializeField]protected float slowDuration;
     protected float slowMultiplier = 2f;
     protected GameObject healthBar;
-    
-    
     //Gets current path info from WaypointManager, healhbar child to visualize damage
     private void Awake()
     {
@@ -86,7 +84,6 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
         deathEffect.GetComponent<DeathAnimation>().PlayDeathAnimation();
         Destroy(gameObject);
     }
-
     //making sprite to trun according to it's current direction
     public void FlipSprite()
     {
@@ -151,6 +148,7 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
         SpriteRenderer renderer = healthBar.GetComponent<SpriteRenderer>();
         renderer.color = color;
     }
+    
     private void CreateDeathEffectObject()
     {
         deathEffect = Instantiate(deathEffectPrefab);

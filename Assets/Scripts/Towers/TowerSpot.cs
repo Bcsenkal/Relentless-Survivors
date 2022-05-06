@@ -11,6 +11,7 @@ public class TowerSpot : MonoBehaviour
     {
         return towerType;
     }
+    
     public void SetCurrentTowerType(GameObject tower)
     {
         towerType = tower;

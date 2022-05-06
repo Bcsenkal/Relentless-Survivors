@@ -9,10 +9,4 @@ public class NewLevelManager : MonoBehaviour
     {
         GameManager.instance.gameUI.ResetValuesOnNewLevel();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
