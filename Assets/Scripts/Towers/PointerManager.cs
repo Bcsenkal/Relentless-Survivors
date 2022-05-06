@@ -14,7 +14,6 @@ public class PointerManager : MonoBehaviour
     private void Start() 
     {
         FindObjectOfType<GameUI>().AttachTowerSelector();
-        GameManager.instance.gameUI.ResetValuesOnNewLevel();
     }
     void Update()
     {

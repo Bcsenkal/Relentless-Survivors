@@ -50,6 +50,8 @@ public class Tower : MonoBehaviour, IFlippable
         if(currentTarget != null && attackTimer > speed)
         {
             var projectile = Instantiate(projectileType,new Vector2(transform.position.x,transform.position.y + 0.2f),Quaternion.identity,gameObject.transform);
+            projectile.GetComponent<Projectile>().TargetToReach = currentTarget;
+            projectile.GetComponent<Projectile>().Damage = Damage;
             attackTimer = 0;
         }
     }

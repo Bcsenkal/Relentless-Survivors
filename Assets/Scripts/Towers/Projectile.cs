@@ -6,24 +6,29 @@ public class Projectile : MonoBehaviour
 {
     private Tower tower;
     private GameObject targetToReach;
+    public GameObject TargetToReach
+    {
+        get{return targetToReach;}
+        set{targetToReach = value;}
+    }
     [SerializeField]private float speed = 3f;
+    private int damage;
+    public int Damage
+    {
+        get{return damage;}
+        set{damage = value;}
+    }
     [SerializeField]private float projectileLifetime;
     [SerializeField]private bool canSlow;
     private float lifetimeTimer;
-    
-    private void Awake() 
-    {
-        tower = GetComponentInParent<Tower>();
-        targetToReach = tower.GetCurrentTarget();
-    }
     // Update is called once per frame
     void Update()
     {
-        if(targetToReach)
+        if(TargetToReach)
         {
             ReachTarget();
         }
-        else if(!targetToReach)
+        else if(!TargetToReach)
         {
             Destroy(gameObject);
         }
@@ -31,14 +36,14 @@ public class Projectile : MonoBehaviour
     }
     private void ReachTarget()
     {
-        transform.position = Vector2.MoveTowards(transform.position,targetToReach.transform.position,speed * Time.deltaTime); 
-        transform.up = targetToReach.transform.position - transform.position;
+        transform.position = Vector2.MoveTowards(transform.position,TargetToReach.transform.position,speed * Time.deltaTime); 
+        transform.up = TargetToReach.transform.position - transform.position;
     }
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        if(other.gameObject == targetToReach)
+        if(other.gameObject == TargetToReach)
         {
-            other.gameObject.GetComponent<Enemy>().TakeDamage(tower.Damage);
+            other.gameObject.GetComponent<Enemy>().TakeDamage(Damage);
             if(canSlow)
             {
                 other.gameObject.GetComponent<Enemy>().ApplySlowEffect();
