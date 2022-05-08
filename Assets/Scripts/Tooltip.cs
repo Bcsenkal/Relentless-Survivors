@@ -2,38 +2,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//This script is not mine, I modified it a bit. Took it from an answer posted by "celtcraftgames" on Unity Forum.
 public class Tooltip : MonoBehaviour
 {
-    public bool IsActive = true;
-
-    Camera cam;
-    Vector3 min, max;
-    RectTransform rect;
-    [SerializeField]float offsetX = 10f;
-    [SerializeField]float offsetY = 10f;
-
-    // Start is called before the first frame update
-    void Start()
+    Vector3 mousePos;
+    public Vector3 offset;
+    public Vector3 screenEdge;
+    private void OnEnable() 
     {
-        cam = Camera.main;
-        rect = GetComponent<RectTransform>();
-        min = new Vector3(0, 0, 0);
-        max = new Vector3(cam.pixelWidth, cam.pixelHeight, 0);
-        Debug.Log(cam.pixelHeight);
-        Debug.Log(cam.pixelWidth);
+        offset = new Vector3(Camera.main.pixelWidth / 10,Camera.main.pixelHeight / 10,10);
+        screenEdge = new Vector3(Camera.main.pixelWidth,Camera.main.pixelHeight,10) - offset;
+        FollowMouse();
+        ConstraintTooltipPosition();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update() 
     {
-        if (IsActive)
+        FollowMouse();
+        ConstraintTooltipPosition();
+    }
+    private void FollowMouse()
+    {
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        var screenPoint = Camera.main.WorldToScreenPoint(mousePos);
+        Debug.Log("ScreenPoint: " + screenPoint);
+        if(screenPoint.x > (screenEdge.x - offset.x) && screenPoint.y > (screenEdge.y - offset.y))
         {
-            //get the tooltip position with offset
-            Vector3 position = new Vector3(Input.mousePosition.x + offsetX, Input.mousePosition.y + offsetY, 0f);
-            //clamp it to the screen size so it doesn't go outside
-            transform.position = new Vector3(Mathf.Clamp(position.x, min.x + rect.rect.width/2, max.x - rect.rect.width/2), Mathf.Clamp(position.y, min.y + rect.rect.height / 2, max.y - rect.rect.height / 2), transform.position.z);
+            transform.position = screenPoint - offset;
         }
-            
+        else
+        {
+            transform.position = screenPoint + offset;
+        }
+        
+        Debug.Log("Position :" + transform.position);
+    }
+    private void ConstraintTooltipPosition()
+    {
+        if(transform.position.x > screenEdge.x)
+        {
+            transform.position = new Vector3(screenEdge.x,transform.position.y,transform.position.z);
+        }
+
+        if(transform.position.y > screenEdge.y)
+        {
+            transform.position = new Vector3(transform.position.x,screenEdge.y,transform.position.z);
+        }
     }
 }

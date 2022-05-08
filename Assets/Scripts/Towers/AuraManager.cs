@@ -12,7 +12,6 @@ public static class AuraManager
         towerList = new List<ITower>();
         auraTowerList = new List<IAuraProvider>();
     }
-    //clears towerlist on awake for new levels
     //Adds tower
     public static void AddTower(ITower tower)
     {
@@ -23,7 +22,6 @@ public static class AuraManager
         if(tower.IsAuraProvider)
         {
             AddAuraTower((IAuraProvider)tower);
-            
         }
     }
     //Removes tower
