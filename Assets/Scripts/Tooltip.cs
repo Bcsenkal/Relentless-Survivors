@@ -21,16 +21,15 @@ public class Tooltip : MonoBehaviour
     }
     private void FollowMouse()
     {
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        var screenPoint = Camera.main.WorldToScreenPoint(mousePos);
-        Debug.Log("ScreenPoint: " + screenPoint);
-        if(screenPoint.x > (screenEdge.x - offset.x) && screenPoint.y > (screenEdge.y - offset.y))
+        mousePos = Input.mousePosition;
+        Debug.Log("inputmouse :" + Input.mousePosition);
+        if(mousePos.x > (screenEdge.x - offset.x) && mousePos.y > (screenEdge.y - offset.y))
         {
-            transform.position = screenPoint - offset;
+            transform.position = mousePos - offset;
         }
         else
         {
-            transform.position = screenPoint + offset;
+            transform.position = mousePos + offset;
         }
         
         Debug.Log("Position :" + transform.position);
