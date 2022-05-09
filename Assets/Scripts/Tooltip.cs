@@ -22,7 +22,6 @@ public class Tooltip : MonoBehaviour
     private void FollowMouse()
     {
         mousePos = Input.mousePosition;
-        Debug.Log("inputmouse :" + Input.mousePosition);
         if(mousePos.x > (screenEdge.x - offset.x) && mousePos.y > (screenEdge.y - offset.y))
         {
             transform.position = mousePos - offset;
@@ -31,8 +30,6 @@ public class Tooltip : MonoBehaviour
         {
             transform.position = mousePos + offset;
         }
-        
-        Debug.Log("Position :" + transform.position);
     }
     private void ConstraintTooltipPosition()
     {

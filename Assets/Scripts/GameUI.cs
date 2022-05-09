@@ -13,11 +13,11 @@ public class GameUI : MonoBehaviour
     [SerializeField]private GameObject heartContainer;
     [SerializeField]private TowerSelector towerSelector;
 
-    public void ResetValuesOnNewLevel()
+    public void ResetValuesOnNewLevel(int level)
     {
         currentCoin = 500;
         UpdateCoinText();
-        SetMaxLife();
+        SetMaxLife(level);
         CreateStartingLives();
     }
 
@@ -51,11 +51,9 @@ public class GameUI : MonoBehaviour
         }
     }
     //Every 5 level gonna be "Hard" level so gives player 12 life instead of 6;
-    public void SetMaxLife()
+    public void SetMaxLife(int level)
     {
-        var currentLevel = (SceneManager.GetActiveScene().buildIndex);
-        
-        if(currentLevel % 5 == 0)
+        if(level % 5 == 0)
         {
             maxLife = 12;
         }

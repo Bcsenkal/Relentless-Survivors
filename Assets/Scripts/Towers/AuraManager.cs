@@ -16,8 +16,6 @@ public static class AuraManager
     public static void AddTower(ITower tower)
     {
         towerList.Add(tower);
-        Debug.Log(towerList.Count());
-        Debug.Log(auraTowerList.Count());
         ApplyAurasToNewTower(tower);
         if(tower.IsAuraProvider)
         {

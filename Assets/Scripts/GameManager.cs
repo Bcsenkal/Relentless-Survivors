@@ -9,8 +9,17 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]private Canvas gameCanvas;
     [SerializeField]private Canvas menuCanvas;
-    [SerializeField]public GameUI gameUI;
-
+    [SerializeField]private GameUI gameUI;
+    public GameUI GameUI
+    {
+        get{return gameUI;}
+    }
+    private bool gameIsActive;
+    public bool GameIsActive
+    {
+        get{return gameIsActive;}
+        set{gameIsActive = value;}
+    }
     public static GameManager instance;
     private void Awake() 
     {
@@ -39,6 +48,7 @@ public class GameManager : MonoBehaviour
     {
         WaypointManager.instance.SetCurrentPath(level);
         SceneManager.LoadScene(level);
+        GameManager.instance.gameUI.ResetValuesOnNewLevel(level);
         GameManager.instance.ActivateGameCanvas();
         AuraManager.ClearTowerList();
     }
