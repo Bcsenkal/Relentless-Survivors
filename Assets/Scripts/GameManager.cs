@@ -9,10 +9,15 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]private Canvas gameCanvas;
     [SerializeField]private Canvas menuCanvas;
-    [field: SerializeField]public GameUI GameUI{get; set;}
+    [SerializeField]private GameUI gameUI;
+    [SerializeField]private GameObject menuPanel;
+    [SerializeField]private GameObject levelSelectionPanel;
+    [SerializeField]private GameObject pauseMenu;
+    [SerializeField]private GameObject settingsPanel;
+    [SerializeField]private GameObject quitConfirmationPanel;
     [field: SerializeField]public bool GameIsActive{get; set;}
     public static GameManager instance;
-    private void Awake() 
+    private void Awake()
     {
         if(instance != null)
         {
@@ -21,18 +26,25 @@ public class GameManager : MonoBehaviour
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
-        ActivateMenuCanvas();
+        ActivateMenu();
+    }
+    private void Update() 
+    {
+        ESCKeyPressed();
     }
 
-    public void ActivateGameCanvas()
+    public void ActivateGame()
     {     
         gameCanvas.gameObject.SetActive(true);
         menuCanvas.gameObject.SetActive(false);
+        GameIsActive = true;
     }
-    public void ActivateMenuCanvas()
+    public void ActivateMenu()
     {
         menuCanvas.gameObject.SetActive(true);
         gameCanvas.gameObject.SetActive(false);
+        menuPanel.SetActive(true);
+        levelSelectionPanel.SetActive(false);
         GameIsActive = false;
     }
 
@@ -40,16 +52,56 @@ public class GameManager : MonoBehaviour
     {
         WaypointManager.instance.SetCurrentPath(level);
         SceneManager.LoadScene(level);
-        GameUI.ResetValuesOnNewLevel(level);
-        ActivateGameCanvas();
+        gameUI.ResetValuesOnNewLevel(level);
         AuraManager.ClearTowerList();
-        GameIsActive = true;
+        ActivateGame();
     }
     
     public void ReturnMenu()
     {
         SceneManager.LoadScene(0);
-        ActivateMenuCanvas();
-        GameIsActive = false;
+        ActivateMenu();
+    }
+
+    public void OpenLevelSelection()
+    {
+        SwitchGameobjectState(menuPanel);
+        SwitchGameobjectState(levelSelectionPanel);
+    }
+
+    private void ESCKeyPressed()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(!GameIsActive)
+            {
+                if(levelSelectionPanel.activeInHierarchy)
+                {
+                    SwitchGameobjectState(levelSelectionPanel);
+                    SwitchGameobjectState(menuPanel);
+                }
+                else
+                {
+                    SwitchGameobjectState(quitConfirmationPanel);
+                }
+            }
+        }
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void SwitchGameobjectState(GameObject panel)
+    {
+        if(panel.activeInHierarchy)
+        {
+            panel.SetActive(false);
+        }
+        else if(!panel.activeInHierarchy)
+        {
+            panel.SetActive(true);
+        }
     }
 }
