@@ -4,13 +4,7 @@ using UnityEngine;
 
 public class AuraTower : Tower, IAuraProvider
 {
-    [SerializeField]protected string auraType;
-    public string AuraType
-    {
-        get{return auraType;}
-        set{auraType = value;}
-    }
-
+    [field: SerializeField]public string AuraType{get; set;}
     public virtual void ApplyAura(ITower tower)
     {
         tower.CurrentAuras.Add(gameObject.name);

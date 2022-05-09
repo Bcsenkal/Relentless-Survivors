@@ -13,18 +13,8 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
     [SerializeField]protected int killValue;
     [SerializeField]protected float defaultSpeed = 10f;
     protected float currentSpeed;
-    protected float currentHealth;
-    public float CurrentHealth
-    {
-        get{return currentHealth;} 
-        set{currentHealth = value;}
-    }
-    [SerializeField]protected float maxHealth;
-    public float MaxHealth
-    {
-        get{return maxHealth;}
-        set{maxHealth = value;}
-    }
+    [field: SerializeField]public float CurrentHealth{get; set;}
+    [field: SerializeField]public float MaxHealth{get; set;}
     [SerializeField]protected float slowDuration;
     protected float slowMultiplier = 2f;
     protected GameObject healthBar;

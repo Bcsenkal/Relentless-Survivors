@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6093381581516909721}
   - component: {fileID: 6093381581516909720}
   - component: {fileID: 6093381581516909723}
-  - component: {fileID: 100587401896854999}
+  - component: {fileID: 2328972905660815626}
   m_Layer: 0
   m_Name: DjinniTower
   m_TagString: Untagged
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
---- !u!114 &100587401896854999
+--- !u!114 &2328972905660815626
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,9 +132,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc05425c4b7e2ff41be2707bf7700e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 30
-  speed: 1.2
-  damage: 10
-  range: 3
-  projectileType: {fileID: 1554868488090210731, guid: 510ee85431d68864ab30ae263f5dc1b5, type: 3}
-  attackTimer: 0
+  <CurrentAuras>k__BackingField: []
+  <Price>k__BackingField: 30
+  <Speed>k__BackingField: 1.2
+  <Damage>k__BackingField: 10
+  <Range>k__BackingField: 3
+  <ProjectileType>k__BackingField: {fileID: 1554868488090210731, guid: 510ee85431d68864ab30ae263f5dc1b5, type: 3}
+  <AttackTimer>k__BackingField: 0
+  <IsAuraProvider>k__BackingField: 0

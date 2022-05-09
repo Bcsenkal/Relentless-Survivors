@@ -5,21 +5,14 @@ using UnityEngine.EventSystems;
 
 public class PointerManager : MonoBehaviour
 {
-    private TowerSelector towerSelector;
-    public TowerSelector TowerSelector
-    {
-        get{return towerSelector;}
-        set{towerSelector = value;}
-    }
-
-    private void Start() 
-    {
-        TowerSelector = FindObjectOfType<GameUI>().AttachTowerSelector();
-    }
-
+    [field: SerializeField]public TowerSelector TowerSelector{get; set;}
+    
     void Update()
     {
-        Click(); 
+        if(GameManager.instance.GameIsActive)
+        {
+           Click(); 
+        } 
     }
 
     private void Click()

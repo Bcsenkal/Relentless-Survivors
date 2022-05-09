@@ -132,9 +132,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc05425c4b7e2ff41be2707bf7700e5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 30
-  speed: 1.6
-  damage: 12
-  range: 2.5
-  projectileType: {fileID: 1554868488090210731, guid: 8040333c99a5d5c4b8ca2478a8eaf42a, type: 3}
-  attackTimer: 0
+  <CurrentAuras>k__BackingField: []
+  <Price>k__BackingField: 30
+  <Speed>k__BackingField: 1.6
+  <Damage>k__BackingField: 12
+  <Range>k__BackingField: 2.5
+  <ProjectileType>k__BackingField: {fileID: 1554868488090210731, guid: 8040333c99a5d5c4b8ca2478a8eaf42a, type: 3}
+  <AttackTimer>k__BackingField: 0
+  <IsAuraProvider>k__BackingField: 0

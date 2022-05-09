@@ -9,17 +9,8 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]private Canvas gameCanvas;
     [SerializeField]private Canvas menuCanvas;
-    [SerializeField]private GameUI gameUI;
-    public GameUI GameUI
-    {
-        get{return gameUI;}
-    }
-    private bool gameIsActive;
-    public bool GameIsActive
-    {
-        get{return gameIsActive;}
-        set{gameIsActive = value;}
-    }
+    [field: SerializeField]public GameUI GameUI{get; set;}
+    [field: SerializeField]public bool GameIsActive{get; set;}
     public static GameManager instance;
     private void Awake() 
     {
@@ -42,20 +33,23 @@ public class GameManager : MonoBehaviour
     {
         menuCanvas.gameObject.SetActive(true);
         gameCanvas.gameObject.SetActive(false);
+        GameIsActive = false;
     }
 
     public void StartLevel(int level)
     {
         WaypointManager.instance.SetCurrentPath(level);
         SceneManager.LoadScene(level);
-        GameManager.instance.gameUI.ResetValuesOnNewLevel(level);
-        GameManager.instance.ActivateGameCanvas();
+        GameUI.ResetValuesOnNewLevel(level);
+        ActivateGameCanvas();
         AuraManager.ClearTowerList();
+        GameIsActive = true;
     }
     
     public void ReturnMenu()
     {
         SceneManager.LoadScene(0);
         ActivateMenuCanvas();
+        GameIsActive = false;
     }
 }

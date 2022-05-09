@@ -4,51 +4,14 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour, IFlippable, ITower
 {
-    [SerializeField] protected List<string> currentAuras;
-    public List<string> CurrentAuras
-    {
-        get{return currentAuras;}
-        set{currentAuras = value;}
-    }
-    [SerializeField] protected int price;
-    public int Price
-    {
-        get{return price;}
-    }
-    [SerializeField] protected float speed;
-    public float Speed
-    {
-        get{return speed;}
-        set{speed = value;}
-    }
-    [SerializeField] protected int damage;
-    public int Damage
-    {
-        get{return damage;}
-    }
-    [SerializeField] protected float range;
-    public float Range
-    {
-        get{return range;}
-        set{range = value;}
-    }
-    [SerializeField] protected GameObject projectileType;
-    public GameObject ProjectileType
-    {
-        get{return projectileType;}
-    }
-    [SerializeField] protected float attackTimer;
-    public float AttackTimer
-    {
-        get{return attackTimer;}
-        set{attackTimer = value;}
-    }
-    [SerializeField] protected bool isAuraProvider;
-    public bool IsAuraProvider
-    {
-        get{return isAuraProvider;}
-        set{isAuraProvider = value;}
-    }
+    [field: SerializeField]public List<string> CurrentAuras{get; set;}
+    [field: SerializeField]public int Price{get; set;}
+    [field: SerializeField]public float Speed{get; set;}
+    [field: SerializeField]public int Damage{get; set;}
+    [field: SerializeField]public float Range{get; set;}
+    [field: SerializeField]public GameObject ProjectileType{get; set;}
+    [field: SerializeField]public float AttackTimer{get; set;}
+    [field: SerializeField]public bool IsAuraProvider{get; set;}
     protected float auraSpeedMultiplier = 1.4f;
     protected GameObject currentTarget;
     protected virtual void Update() 

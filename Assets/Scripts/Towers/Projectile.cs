@@ -5,19 +5,9 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     private Tower tower;
-    private GameObject targetToReach;
-    public GameObject TargetToReach
-    {
-        get{return targetToReach;} 
-        set{targetToReach = value;}
-    }
+    public GameObject TargetToReach{get; set;}
     [SerializeField]private float speed = 3f;
-    private int damage;
-    public int Damage
-    {
-        get{return damage;}
-        set{damage = value;}
-    }
+    public int Damage{get; set;}
     [SerializeField]private float projectileLifetime;
     [SerializeField]private bool canSlow;
     private float lifetimeTimer;

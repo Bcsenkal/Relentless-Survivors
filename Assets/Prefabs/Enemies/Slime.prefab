@@ -103,9 +103,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathEffectPrefab: {fileID: 8065714678512078446, guid: 10d9bc9830c03b348a9bf6582ea3f1c2, type: 3}
-  value: 2
+  deathEffect: {fileID: 0}
+  killValue: 0
   defaultSpeed: 5
-  maxHealth: 7
+  <CurrentHealth>k__BackingField: 0
+  <MaxHealth>k__BackingField: 8
   slowDuration: 0
 --- !u!95 &4118547154989490562
 Animator:
