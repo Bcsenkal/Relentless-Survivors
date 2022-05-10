@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 980282855
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 1010260393, guid: b30a5783c7afecd48bd4000495c40be7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -124,10 +124,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b7b5a49d928224fbb1a891e129c2ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefabs:
-  - {fileID: 6093381581516909727, guid: 30118f08d4d3cd14e971a64b1c396fc5, type: 3}
-  - {fileID: 6093381581516909727, guid: 9b5b9c28406428344b7099437f1767ca, type: 3}
-  - {fileID: 6093381581516909727, guid: ae10e675d623f964b818ea055dd15fd9, type: 3}
-  - {fileID: 6093381581516909727, guid: 0ae27e8b988845942b5561e3b335c18d, type: 3}
-  towerType: 
-  hasTower: 0
+  towerType: {fileID: 0}

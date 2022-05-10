@@ -43,7 +43,7 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
@@ -38035,7 +38035,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       oryx_16bit_fantasy_world_trans_1086: -1642352583
-      oryx_16bit_fantasy_world_trans_760: 1252448696
+      oryx_16bit_fantasy_world_trans_161: -798326417
       oryx_16bit_fantasy_world_trans_581: 1285052942
       oryx_16bit_fantasy_world_trans_1357: 2064762806
       oryx_16bit_fantasy_world_trans_1059: 40327398
@@ -39835,7 +39835,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1774: 922656929
       oryx_16bit_fantasy_world_trans_331: 1755937329
       oryx_16bit_fantasy_world_trans_308: 1046170584
-      oryx_16bit_fantasy_world_trans_161: -798326417
+      oryx_16bit_fantasy_world_trans_760: 1252448696
       oryx_16bit_fantasy_world_trans_1109: 2061932410
       oryx_16bit_fantasy_world_trans_567: -931552625
   spritePackingTag: 

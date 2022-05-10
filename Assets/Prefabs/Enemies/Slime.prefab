@@ -35,6 +35,7 @@ Transform:
   m_Children:
   - {fileID: 4989875840383862671}
   - {fileID: 8320884991925190913}
+  - {fileID: 7007573218838286109}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -76,9 +77,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 980282855
+  m_SortingLayer: 4
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: 7d0d9f18260e7954997af7f13cda86f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -102,8 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba96b9e149358ca4e94dcf37f2e7230f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathEffectPrefab: {fileID: 8065714678512078446, guid: 10d9bc9830c03b348a9bf6582ea3f1c2, type: 3}
-  deathEffect: {fileID: 0}
+  deathEffect: {fileID: 6403640379789419966}
   killValue: 0
   defaultSpeed: 5
   <CurrentHealth>k__BackingField: 0
@@ -166,6 +166,77 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1001 &3977065754526739408
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4118547154989490575}
+    m_Modifications:
+    - target: {fileID: 6201041679307924685, guid: 10d9bc9830c03b348a9bf6582ea3f1c2, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6201041679307924685, guid: 10d9bc9830c03b348a9bf6582ea3f1c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6201041679307924685, guid: 10d9bc9830c03b348a9bf6582ea3f1c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6201041679307924685, guid: 10d9bc9830c03b348a9bf6582ea3f1c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6201041679307924685, guid: 10d9bc9830c03b348a9bf6582ea3f1c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6201041679307924685, guid: 10d9bc9830c03b348a9bf6582ea3f1c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6201041679307924685, guid: 10d9bc9830c03b348a9bf6582ea3f1c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6201041679307924685, guid: 10d9bc9830c03b348a9bf6582ea3f1c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6201041679307924685, guid: 10d9bc9830c03b348a9bf6582ea3f1c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6201041679307924685, guid: 10d9bc9830c03b348a9bf6582ea3f1c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6201041679307924685, guid: 10d9bc9830c03b348a9bf6582ea3f1c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8065714678512078446, guid: 10d9bc9830c03b348a9bf6582ea3f1c2, type: 3}
+      propertyPath: m_Name
+      value: DeathAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 8065714678512078446, guid: 10d9bc9830c03b348a9bf6582ea3f1c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 10d9bc9830c03b348a9bf6582ea3f1c2, type: 3}
+--- !u!1 &6403640379789419966 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8065714678512078446, guid: 10d9bc9830c03b348a9bf6582ea3f1c2, type: 3}
+  m_PrefabInstance: {fileID: 3977065754526739408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7007573218838286109 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6201041679307924685, guid: 10d9bc9830c03b348a9bf6582ea3f1c2, type: 3}
+  m_PrefabInstance: {fileID: 3977065754526739408}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5057279960849178508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -282,10 +353,6 @@ PrefabInstance:
     - target: {fileID: 7231488494887876370, guid: 7e6fb65332434904da4e18b77619a9b1, type: 3}
       propertyPath: m_Name
       value: HealthBar1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8601095686735744208, guid: 7e6fb65332434904da4e18b77619a9b1, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e6fb65332434904da4e18b77619a9b1, type: 3}
