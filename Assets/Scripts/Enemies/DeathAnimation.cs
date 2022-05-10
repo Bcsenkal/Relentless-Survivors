@@ -9,6 +9,11 @@ public class DeathAnimation : MonoBehaviour
     {
         animator = GetComponent<Animator>();
     }
+    private void OnEnable()
+    {
+        transform.position = transform.parent.position;
+        PlayDeathAnimation();
+    }
     
     public void PlayDeathAnimation()
     {

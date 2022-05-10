@@ -16,29 +16,36 @@ public class WaveSpawner : MonoBehaviour
         if(GameManager.instance.GameIsActive)
         {
             currentWave = 0;
+            LivingEnemies.isSpawning = true;
             currentLevelWave = levelWaves[GameManager.instance.CurrentLevel - 1];
             Invoke("SpawnFirstWave",initialDelay);
         }
     }
+    
     //Single coroutine for all waves
     IEnumerator Spawn(Wave wave)
     {
         for(int i = 0; i < wave.enemyPrefabs.Length; i++)
         {
-            Instantiate(wave.enemyPrefabs[i]);
+            var enemy = Instantiate(wave.enemyPrefabs[i]);
+            LivingEnemies.AddEnemy(enemy);
             yield return new WaitForSeconds(spawnInterval);
         }
-        yield return new WaitForSeconds(timeBetweenWaves);
-        SpawnNextWave();
+        if(currentWave < currentLevelWave.waves.Length -1)
+        {
+            yield return new WaitForSeconds(timeBetweenWaves);
+            SpawnNextWave();
+        }
+        else
+        {
+            LivingEnemies.isSpawning = false;
+        }
     }
 
     private void SpawnNextWave()
     {
-        if(currentWave < currentLevelWave.waves.Length -1)
-        {
-            currentWave ++;
-            StartCoroutine(Spawn(currentLevelWave.waves[currentWave]));
-        }
+        currentWave ++;
+        StartCoroutine(Spawn(currentLevelWave.waves[currentWave]));
     }
     
     private void SpawnFirstWave()

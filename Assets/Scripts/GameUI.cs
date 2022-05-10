@@ -12,12 +12,16 @@ public class GameUI : MonoBehaviour
     [SerializeField]private TextMeshProUGUI coinText;
     [SerializeField]private GameObject heartContainer;
     [SerializeField]private TowerSelector towerSelector;
+    [SerializeField]private GameObject gameOverPanel;
+    [SerializeField]private GameObject winPanel;
     [SerializeField]private GameObject waveSpawner;
 
     private void OnEnable() 
     {
         towerSelector.gameObject.SetActive(false);
         waveSpawner.SetActive(true);
+        gameOverPanel.SetActive(false);
+        winPanel.SetActive(false);
         ResetValuesOnNewLevel(GameManager.instance.CurrentLevel);
     }
 
@@ -87,15 +91,31 @@ public class GameUI : MonoBehaviour
         }
         else
         {
-            GameManager.instance.ReturnMenu();
+            GameOver();
         }
     }
-
+    public void GameOver()
+    {
+        gameOverPanel.SetActive(true);
+        Time.timeScale = 0;
+    }
+    //Calls Win method with small delay
+    public void CallWinCondition()
+    {
+        Invoke("Win",2);
+    }
+    
+    public void Win()
+    {
+        winPanel.SetActive(true);
+        Time.timeScale = 0;
+    }
+    
     public TowerSelector AttachTowerSelector()
     {
         return towerSelector;
     }
-    
+
     private void OnDisable() 
     {
         waveSpawner.SetActive(false);    

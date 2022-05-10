@@ -7,7 +7,6 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
     private Vector3[] currentPath;
     private int pathIndex = 0;
     [Header("Death")]
-    [SerializeField]protected GameObject deathEffectPrefab;
     [SerializeField]protected GameObject deathEffect;
     [Header("Stats")]
     [SerializeField]protected int killValue;
@@ -25,7 +24,6 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
         healthBar = transform.GetChild(0).gameObject;
         CurrentHealth = MaxHealth;
         currentSpeed = defaultSpeed;
-        CreateDeathEffectObject();
     }
     //Sets current position to starting point of the path
     private void Start()
@@ -60,7 +58,8 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
         if(nextHealthValue <= 0)
         {
             Death();
-            FindObjectOfType<GameUI>().AddCoin(killValue);
+            LivingEnemies.RemoveEnemy(gameObject);
+            GameManager.instance.gameUI.AddCoin(killValue);
         }
         else
         {
@@ -71,7 +70,7 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
 
     public void Death()
     {
-        deathEffect.GetComponent<DeathAnimation>().PlayDeathAnimation();
+        ActivateDeathEffectObject();
         Destroy(gameObject);
     }
     //making sprite to trun according to it's current direction
@@ -139,10 +138,8 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
         renderer.color = color;
     }
     
-    private void CreateDeathEffectObject()
+    private void ActivateDeathEffectObject()
     {
-        deathEffect = Instantiate(deathEffectPrefab);
-        deathEffect.transform.SetParent(gameObject.transform);
-        deathEffect.transform.position = transform.position;
+        deathEffect.SetActive(true);
     }
 }

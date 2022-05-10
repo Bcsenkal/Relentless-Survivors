@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 {   
     [SerializeField]private Canvas gameCanvas;
     [SerializeField]private Canvas menuCanvas;
-    [SerializeField]private GameUI gameUI;
+    [SerializeField]public GameUI gameUI;
     [SerializeField]private GameObject pauseMenu;
     [field: SerializeField]public bool GameIsActive{get; set;}
     public int CurrentLevel{get; set;}
@@ -36,7 +36,16 @@ public class GameManager : MonoBehaviour
         WaypointManager.instance.SetCurrentPath(level);
         SceneManager.LoadScene(level);
         AuraManager.ClearTowerList();
+        LivingEnemies.ClearEnemyList();
+        Time.timeScale = 1;
         GameIsActive = true;
+    }
+
+    public void RestartLevel()
+    {
+        gameUI.gameObject.SetActive(false);
+        StartLevel(CurrentLevel);
+        gameUI.gameObject.SetActive(true);
     }
     
     public void ReturnMenu()
