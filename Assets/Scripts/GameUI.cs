@@ -12,6 +12,14 @@ public class GameUI : MonoBehaviour
     [SerializeField]private TextMeshProUGUI coinText;
     [SerializeField]private GameObject heartContainer;
     [SerializeField]private TowerSelector towerSelector;
+    [SerializeField]private GameObject waveSpawner;
+
+    private void OnEnable() 
+    {
+        towerSelector.gameObject.SetActive(false);
+        waveSpawner.SetActive(true);
+        ResetValuesOnNewLevel(GameManager.instance.CurrentLevel);
+    }
 
     public void ResetValuesOnNewLevel(int level)
     {
@@ -50,7 +58,7 @@ public class GameUI : MonoBehaviour
             heartContainer.transform.GetChild(i).gameObject.SetActive(true);
         }
     }
-    //Every 5 level gonna be "Hard" level so gives player 12 life instead of 6;
+    //Every 5 level is "Hard" level so gives player 12 life instead of 6;
     public void SetMaxLife(int level)
     {
         if(level % 5 == 0)
@@ -86,5 +94,10 @@ public class GameUI : MonoBehaviour
     public TowerSelector AttachTowerSelector()
     {
         return towerSelector;
+    }
+    
+    private void OnDisable() 
+    {
+        waveSpawner.SetActive(false);    
     }
 }

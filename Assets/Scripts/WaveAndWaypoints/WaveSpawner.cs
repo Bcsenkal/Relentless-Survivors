@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
-    [SerializeField] private Wave[] waves;
+    [SerializeField] private List<LevelWaves> levelWaves;
+    private LevelWaves currentLevelWave;
     private int currentWave = 0;
     private float spawnInterval = 0.7f;
     private float timeBetweenWaves = 8f;
-    private float initialDelay = 3f;
-    
-    private void Start()
+    private float initialDelay = 1f;
+
+    private void OnEnable()
     {
-        Invoke("SpawnFirstWave",initialDelay);
+        if(GameManager.instance.GameIsActive)
+        {
+            currentWave = 0;
+            currentLevelWave = levelWaves[GameManager.instance.CurrentLevel - 1];
+            Invoke("SpawnFirstWave",initialDelay);
+        }
     }
     //Single coroutine for all waves
     IEnumerator Spawn(Wave wave)
@@ -28,15 +34,21 @@ public class WaveSpawner : MonoBehaviour
 
     private void SpawnNextWave()
     {
-        if(currentWave < waves.Length -1)
+        if(currentWave < currentLevelWave.waves.Length -1)
         {
             currentWave ++;
-            StartCoroutine(Spawn(waves[currentWave]));
+            StartCoroutine(Spawn(currentLevelWave.waves[currentWave]));
         }
     }
     
     private void SpawnFirstWave()
     {
-        StartCoroutine(Spawn(waves[currentWave]));
+        StartCoroutine(Spawn(currentLevelWave.waves[currentWave]));
+    }
+    //Stops coroutines and Invoke to avoid errors.
+    private void OnDisable() 
+    {
+        StopAllCoroutines();
+        CancelInvoke("SpawnFirstWave");
     }
 }
