@@ -12,7 +12,7 @@ public class ButtonBase : MonoBehaviour
     protected virtual void Awake()
     {
         gameObject.GetComponent<Button>().onClick.AddListener(delegate {DisableSelectorOnClick();});
-        gameObject.GetComponent<EventTrigger>();
+        towerSelector = transform.parent.parent.gameObject;
     }
 
     protected virtual void Update()
@@ -22,12 +22,11 @@ public class ButtonBase : MonoBehaviour
 
     void GetCurrentSpot()
     {
-        currentSpot = GetComponentInParent<TowerSelector>().currentSpot;
+        currentSpot = towerSelector.GetComponent<TowerSelector>().currentSpot;
     }
     
     void DisableSelectorOnClick()
     {
-        towerSelector = transform.parent.gameObject.transform.parent.gameObject;
         towerSelector.gameObject.SetActive(false);
     }
 }

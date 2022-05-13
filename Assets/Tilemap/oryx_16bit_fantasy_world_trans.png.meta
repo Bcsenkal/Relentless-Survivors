@@ -44,7 +44,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 0
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 24
@@ -150,7 +150,11 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -12, y: 12}
+        - {x: -12, y: -12}
+        - {x: 12, y: -12}
+        - {x: 12, y: 12}
       physicsShape: []
       tessellationDetail: 0
       bones: []
@@ -711,9 +715,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 696
-        y: 959
-        width: 24
-        height: 24
+        y: 743
+        width: 336
+        height: 216
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -859,8 +863,8 @@ TextureImporter:
         serializedVersion: 2
         x: 864
         y: 959
-        width: 24
-        height: 24
+        width: 7
+        height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -37712,10 +37716,10 @@ TextureImporter:
       name: oryx_16bit_fantasy_world_trans_1789
       rect:
         serializedVersion: 2
-        x: 72
+        x: 70
         y: 23
-        width: 24
-        height: 24
+        width: 4
+        height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -37733,10 +37737,10 @@ TextureImporter:
       name: oryx_16bit_fantasy_world_trans_1790
       rect:
         serializedVersion: 2
-        x: 96
+        x: 94
         y: 23
-        width: 24
-        height: 24
+        width: 8
+        height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -37777,8 +37781,8 @@ TextureImporter:
         serializedVersion: 2
         x: 144
         y: 23
-        width: 24
-        height: 24
+        width: 4
+        height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -37796,10 +37800,10 @@ TextureImporter:
       name: oryx_16bit_fantasy_world_trans_1793
       rect:
         serializedVersion: 2
-        x: 168
+        x: 167
         y: 23
-        width: 24
-        height: 24
+        width: 4
+        height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -37859,10 +37863,10 @@ TextureImporter:
       name: oryx_16bit_fantasy_world_trans_1796
       rect:
         serializedVersion: 2
-        x: 240
+        x: 238
         y: 23
-        width: 24
-        height: 24
+        width: 4
+        height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -37880,10 +37884,10 @@ TextureImporter:
       name: oryx_16bit_fantasy_world_trans_1797
       rect:
         serializedVersion: 2
-        x: 264
+        x: 261
         y: 23
-        width: 24
-        height: 24
+        width: 4
+        height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -38006,6 +38010,300 @@ TextureImporter:
       name: oryx_16bit_fantasy_world_trans_1803
       rect:
         serializedVersion: 2
+        x: 1313
+        y: 34
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72cea1883d71be246a40a184d580fb33
+      internalID: -278575605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1804
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 966
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66cdbe282bd0a8c478ed9682ef807905
+      internalID: 55494417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1805
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 966
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa6e539e3fd174409caa95b3232232a
+      internalID: 820783673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1806
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 969
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff00cc55f3d5674280ddc10149fcb27
+      internalID: 1008800895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1807
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 962
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b2057b2f9f2f0479e25ed1ce2428ab
+      internalID: 902365257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1808
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 948
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7cc29e388f2b2244920d9f9e16b2621
+      internalID: 700262064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1809
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 940
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439373c538ff71240a57d771f4730136
+      internalID: -1588079152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1810
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 936
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64aeb647a59c63443ba8159d3eaaef58
+      internalID: 2142103400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1811
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 936
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2029d1746f450469851a5b0b70b9cd
+      internalID: 328754914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1812
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 935
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05ea19a1c7089945a833877e959da19
+      internalID: -889907086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1813
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 935
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2616e33b7cb39246bb6ae3d5b3eec35
+      internalID: 392510716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1814
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 912
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29d2279f80cb1641822c4eb3dfe1642
+      internalID: 690656231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1815
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 912
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db38dcf2a4dc5c848a1e8d1769f7b37c
+      internalID: -2047028347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1816
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 890
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2928a6e1f432f784fb30e8b57e210a5d
+      internalID: 846399905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1817
+      rect:
+        serializedVersion: 2
         x: 1320
         y: 23
         width: 24
@@ -38017,8 +38315,764 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72cea1883d71be246a40a184d580fb33
-      internalID: -278575605
+      spriteID: 7c6a3c8ee1dc2e9448c582be7219b8a2
+      internalID: 84929446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1818
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 23
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b141a83ed73084479c47ed9412b0e51
+      internalID: -126581970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1819
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 23
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f64d2f5fdf14371408079419c0c74583
+      internalID: -1818564606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1820
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 23
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0a121a2d12d464dbca99fa8844242f
+      internalID: 1149405247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1821
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 23
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a06fb6a09f27f4f8ef3f2c9efc052e
+      internalID: 1306001027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1822
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 23
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9787f6d78715da7469f7cc06cda55f3d
+      internalID: 820597055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1823
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 23
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c28028dd13c9164f92599ca6136b137
+      internalID: 1444773204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1824
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 23
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4f4b1f7d3700f444871fb8fbe44db15
+      internalID: -934624981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1825
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 23
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93929e02480b25444ab3d098b83cb74c
+      internalID: -1341946690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1826
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 23
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3624510a25719984e9b454cdaa12ac79
+      internalID: -1093962839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1827
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 23
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b40798a81ab21a047848b16596012dce
+      internalID: -1397604172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1828
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 23
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d2b00717f4e764ebe4c3f197695f83
+      internalID: 1910146700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1829
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 23
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42f8495ce4c4cf443bb6485de8fc9427
+      internalID: 1568112355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1830
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 23
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36418aea331b41342b55f41266d04c8e
+      internalID: 1271217144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1831
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 23
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebae1e2b12aaf6f40a52226ee1b93ffb
+      internalID: 1056129057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1832
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 23
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b817b96416528b64d8c80cf36c310218
+      internalID: 2004318617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1833
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 23
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487de596227b38842886c64de3712101
+      internalID: -1424737198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1834
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 23
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e8cd5e98fb43d4792ce67d51131308
+      internalID: 1144107599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1835
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 23
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f6ccaf9692f0f74b87a648805de3d52
+      internalID: -1937961955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1836
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 23
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a0abde8f712dce44965685fe466fa81
+      internalID: -600442350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1837
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 23
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451580d607f9e874ea283c9962e8f47d
+      internalID: -668485724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1838
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 23
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77590934ee510be4488a8918dd402fc6
+      internalID: 544153020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1839
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 23
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 100cc3dd595040d46a61ee493f4c72f5
+      internalID: 576257269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1840
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 23
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e87b91ca5e42304dbfcc460b2021ad0
+      internalID: 1426791122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1841
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 23
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5f3858cacad058418f5a1f79ddd00e0
+      internalID: -1647332100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1842
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 23
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707ca05b56f5c3d4b80d122c18c75123
+      internalID: 840094024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1843
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 23
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5103e6b98825b32419fca8148b9e59ee
+      internalID: 156921084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1844
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 23
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7151e4eb019c0234d813ff8be2eb9368
+      internalID: -1743273500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1845
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 23
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0a4aeadfa79be4284dfd70b77cbca3
+      internalID: -1582534193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1846
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 23
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64856730a61b2714c9cd1c77c0e397c1
+      internalID: -318759836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1847
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 23
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d6d057c4f7c2d04f970e12eef20225f
+      internalID: -223480207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1848
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 23
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813cd591601878240a001fc221fa5a6e
+      internalID: -1061950500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1849
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 23
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9e3820c76cc3043a25e33cff9c336a
+      internalID: -1279647473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1850
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 23
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f177b8e85875f46ac0927989c7cb21
+      internalID: -1748214126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1851
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 23
+        width: 12
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e71b4e61a280ae44cbc2dead9538d552
+      internalID: -391310663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1852
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 959
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf71448981eb1d4eae0e09b7663b4e4
+      internalID: 1447628581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oryx_16bit_fantasy_world_trans_1853
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 959
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c25a7e86404183439c273bdc1b1164a
+      internalID: -247347864
       vertices: []
       indices: 
       edges: []
@@ -38035,11 +39089,12 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       oryx_16bit_fantasy_world_trans_1086: -1642352583
-      oryx_16bit_fantasy_world_trans_161: -798326417
+      oryx_16bit_fantasy_world_trans_760: 1252448696
       oryx_16bit_fantasy_world_trans_581: 1285052942
       oryx_16bit_fantasy_world_trans_1357: 2064762806
       oryx_16bit_fantasy_world_trans_1059: 40327398
       oryx_16bit_fantasy_world_trans_798: -1135068044
+      oryx_16bit_fantasy_world_trans_1821: 1306001027
       oryx_16bit_fantasy_world_trans_575: -1770631506
       oryx_16bit_fantasy_world_trans_64: -503217226
       oryx_16bit_fantasy_world_trans_1784: 1645604113
@@ -38056,6 +39111,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1370: 1608544429
       oryx_16bit_fantasy_world_trans_623: 2094085974
       oryx_16bit_fantasy_world_trans_210: 1365652356
+      oryx_16bit_fantasy_world_trans_1804: 55494417
       oryx_16bit_fantasy_world_trans_474: 420437663
       oryx_16bit_fantasy_world_trans_465: 1058576664
       oryx_16bit_fantasy_world_trans_511: -1562396846
@@ -38094,6 +39150,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1051: -1422443676
       oryx_16bit_fantasy_world_trans_159: -1527698266
       oryx_16bit_fantasy_world_trans_149: -525197723
+      oryx_16bit_fantasy_world_trans_1813: 392510716
       oryx_16bit_fantasy_world_trans_105: -1835635848
       oryx_16bit_fantasy_world_trans_501: 1453582203
       oryx_16bit_fantasy_world_trans_866: -1053465832
@@ -38106,6 +39163,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1246: -597729051
       oryx_16bit_fantasy_world_trans_1700: -411316892
       oryx_16bit_fantasy_world_trans_1551: 2067514768
+      oryx_16bit_fantasy_world_trans_1808: 700262064
       oryx_16bit_fantasy_world_trans_1143: -1364014133
       oryx_16bit_fantasy_world_trans_642: 1242137910
       oryx_16bit_fantasy_world_trans_1625: -838342619
@@ -38126,6 +39184,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1739: 413228541
       oryx_16bit_fantasy_world_trans_577: 1801420753
       oryx_16bit_fantasy_world_trans_934: -1223977688
+      oryx_16bit_fantasy_world_trans_1848: -1061950500
       oryx_16bit_fantasy_world_trans_732: 1041301119
       oryx_16bit_fantasy_world_trans_566: -932352093
       oryx_16bit_fantasy_world_trans_1670: -1775165811
@@ -38191,6 +39250,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_315: -717177341
       oryx_16bit_fantasy_world_trans_1686: -612338174
       oryx_16bit_fantasy_world_trans_1172: -919042590
+      oryx_16bit_fantasy_world_trans_1843: 156921084
       oryx_16bit_fantasy_world_trans_1283: 1718151354
       oryx_16bit_fantasy_world_trans_612: 687542201
       oryx_16bit_fantasy_world_trans_1096: -521771396
@@ -38228,6 +39288,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_357: -85069006
       oryx_16bit_fantasy_world_trans_1226: 734469008
       oryx_16bit_fantasy_world_trans_1348: 1566613897
+      oryx_16bit_fantasy_world_trans_1810: 2142103400
       oryx_16bit_fantasy_world_trans_217: 1854353645
       oryx_16bit_fantasy_world_trans_386: -1064286592
       oryx_16bit_fantasy_world_trans_1475: 843286943
@@ -38271,15 +39332,16 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1626: -1333672780
       oryx_16bit_fantasy_world_trans_710: 612057369
       oryx_16bit_fantasy_world_trans_1802: 395729497
+      oryx_16bit_fantasy_world_trans_1837: -668485724
       oryx_16bit_fantasy_world_trans_850: 2014230249
       oryx_16bit_fantasy_world_trans_897: 958972299
       oryx_16bit_fantasy_world_trans_596: -1977319503
       oryx_16bit_fantasy_world_trans_837: -1895398758
       oryx_16bit_fantasy_world_trans_1385: -460505046
-      oryx_16bit_fantasy_world_trans_1716: 1532479358
       oryx_16bit_fantasy_world_trans_527: 714509841
       oryx_16bit_fantasy_world_trans_75: 1561419463
       oryx_16bit_fantasy_world_trans_1779: 29733505
+      oryx_16bit_fantasy_world_trans_1716: 1532479358
       oryx_16bit_fantasy_world_trans_1210: 1155351241
       oryx_16bit_fantasy_world_trans_834: -911624656
       oryx_16bit_fantasy_world_trans_585: -1504463229
@@ -38295,6 +39357,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1308: 1512506956
       oryx_16bit_fantasy_world_trans_1455: -131509367
       oryx_16bit_fantasy_world_trans_1301: -949204797
+      oryx_16bit_fantasy_world_trans_1845: -1582534193
       oryx_16bit_fantasy_world_trans_1002: -778815642
       oryx_16bit_fantasy_world_trans_1265: 1905744147
       oryx_16bit_fantasy_world_trans_1110: 2043236999
@@ -38304,18 +39367,20 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1170: 2116009145
       oryx_16bit_fantasy_world_trans_12: -1330117607
       oryx_16bit_fantasy_world_trans_610: 1028737921
-      oryx_16bit_fantasy_world_trans_735: -777416629
       oryx_16bit_fantasy_world_trans_951: -362541701
+      oryx_16bit_fantasy_world_trans_735: -777416629
       oryx_16bit_fantasy_world_trans_1028: -292473260
       oryx_16bit_fantasy_world_trans_1778: 1992432285
       oryx_16bit_fantasy_world_trans_995: 1917435018
       oryx_16bit_fantasy_world_trans_1548: 1552133955
+      oryx_16bit_fantasy_world_trans_1849: -1279647473
       oryx_16bit_fantasy_world_trans_1645: 26849727
       oryx_16bit_fantasy_world_trans_1565: 1650230540
       oryx_16bit_fantasy_world_trans_886: -548958857
       oryx_16bit_fantasy_world_trans_810: 72719278
       oryx_16bit_fantasy_world_trans_952: -1065821228
       oryx_16bit_fantasy_world_trans_464: -1067042101
+      oryx_16bit_fantasy_world_trans_1818: -126581970
       oryx_16bit_fantasy_world_trans_86: -429119254
       oryx_16bit_fantasy_world_trans_1461: -1828332021
       oryx_16bit_fantasy_world_trans_1267: 1276904958
@@ -38329,19 +39394,20 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1477: -1864569301
       oryx_16bit_fantasy_world_trans_1024: 126947775
       oryx_16bit_fantasy_world_trans_1131: 931307278
-      oryx_16bit_fantasy_world_trans_1069: 1687286840
-      oryx_16bit_fantasy_world_trans_1020: 1779124486
       oryx_16bit_fantasy_world_trans_1160: 740027800
+      oryx_16bit_fantasy_world_trans_1020: 1779124486
+      oryx_16bit_fantasy_world_trans_1222: -235242785
+      oryx_16bit_fantasy_world_trans_1069: 1687286840
       oryx_16bit_fantasy_world_trans_29: -1195632650
-      oryx_16bit_fantasy_world_trans_1793: -1649219651
       oryx_16bit_fantasy_world_trans_929: -1084075901
       oryx_16bit_fantasy_world_trans_649: -1228606219
       oryx_16bit_fantasy_world_trans_1682: 1095079135
-      oryx_16bit_fantasy_world_trans_1222: -235242785
+      oryx_16bit_fantasy_world_trans_1793: -1649219651
       oryx_16bit_fantasy_world_trans_244: 526647499
       oryx_16bit_fantasy_world_trans_1421: -1659968558
       oryx_16bit_fantasy_world_trans_1202: 1911246476
       oryx_16bit_fantasy_world_trans_841: 2059755772
+      oryx_16bit_fantasy_world_trans_1805: 820783673
       oryx_16bit_fantasy_world_trans_145: -1207088653
       oryx_16bit_fantasy_world_trans_1001: -1850106622
       oryx_16bit_fantasy_world_trans_482: 1175404302
@@ -38349,9 +39415,10 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_342: -141069506
       oryx_16bit_fantasy_world_trans_136: 836485682
       oryx_16bit_fantasy_world_trans_1499: 1857851297
+      oryx_16bit_fantasy_world_trans_1807: 902365257
       oryx_16bit_fantasy_world_trans_322: -1249533638
       oryx_16bit_fantasy_world_trans_1490: -1013938320
-      oryx_16bit_fantasy_world_trans_523: 1919458483
+      oryx_16bit_fantasy_world_trans_1833: -1424737198
       oryx_16bit_fantasy_world_trans_881: -760388069
       oryx_16bit_fantasy_world_trans_938: 2135786516
       oryx_16bit_fantasy_world_trans_1603: -1986423376
@@ -38359,13 +39426,14 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1484: -1401010696
       oryx_16bit_fantasy_world_trans_1030: -1578087273
       oryx_16bit_fantasy_world_trans_647: -1177898138
-      oryx_16bit_fantasy_world_trans_1587: 578798396
+      oryx_16bit_fantasy_world_trans_523: 1919458483
       oryx_16bit_fantasy_world_trans_713: 1427658787
       oryx_16bit_fantasy_world_trans_573: -247175270
       oryx_16bit_fantasy_world_trans_273: 1752108299
       oryx_16bit_fantasy_world_trans_326: 2042898272
       oryx_16bit_fantasy_world_trans_377: -1501083921
       oryx_16bit_fantasy_world_trans_780: -739349109
+      oryx_16bit_fantasy_world_trans_1587: 578798396
       oryx_16bit_fantasy_world_trans_1742: -670079099
       oryx_16bit_fantasy_world_trans_1156: -490090232
       oryx_16bit_fantasy_world_trans_507: 1562060183
@@ -38385,6 +39453,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1098: -403138413
       oryx_16bit_fantasy_world_trans_918: 925833263
       oryx_16bit_fantasy_world_trans_1426: -758682079
+      oryx_16bit_fantasy_world_trans_1834: 1144107599
       oryx_16bit_fantasy_world_trans_245: 1914595963
       oryx_16bit_fantasy_world_trans_13: 1457058635
       oryx_16bit_fantasy_world_trans_360: 1565378966
@@ -38431,6 +39500,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_389: 1472587812
       oryx_16bit_fantasy_world_trans_1567: -895704546
       oryx_16bit_fantasy_world_trans_816: -1759060029
+      oryx_16bit_fantasy_world_trans_1809: -1588079152
       oryx_16bit_fantasy_world_trans_967: 294177433
       oryx_16bit_fantasy_world_trans_854: 933335978
       oryx_16bit_fantasy_world_trans_1080: -506426413
@@ -38466,9 +39536,11 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1410: 1747105951
       oryx_16bit_fantasy_world_trans_754: 1517342563
       oryx_16bit_fantasy_world_trans_1140: 318506360
+      oryx_16bit_fantasy_world_trans_1806: 1008800895
       oryx_16bit_fantasy_world_trans_1727: -1142365418
       oryx_16bit_fantasy_world_trans_1300: -532955074
       oryx_16bit_fantasy_world_trans_324: 1072216307
+      oryx_16bit_fantasy_world_trans_1825: -1341946690
       oryx_16bit_fantasy_world_trans_604: -1519957285
       oryx_16bit_fantasy_world_trans_1386: 243216654
       oryx_16bit_fantasy_world_trans_510: 476653595
@@ -38516,6 +39588,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1000: -1691497826
       oryx_16bit_fantasy_world_trans_184: 1158845493
       oryx_16bit_fantasy_world_trans_976: -1655204775
+      oryx_16bit_fantasy_world_trans_1840: 1426791122
       oryx_16bit_fantasy_world_trans_876: -281101982
       oryx_16bit_fantasy_world_trans_1568: 383581487
       oryx_16bit_fantasy_world_trans_1281: 1350561898
@@ -38555,6 +39628,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_892: 615022724
       oryx_16bit_fantasy_world_trans_1122: -1601401875
       oryx_16bit_fantasy_world_trans_106: 545603072
+      oryx_16bit_fantasy_world_trans_1811: 328754914
       oryx_16bit_fantasy_world_trans_431: -526705208
       oryx_16bit_fantasy_world_trans_789: 1058216406
       oryx_16bit_fantasy_world_trans_1236: -1659520470
@@ -38576,6 +39650,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_761: 2007632910
       oryx_16bit_fantasy_world_trans_1251: -186218832
       oryx_16bit_fantasy_world_trans_720: 1408193504
+      oryx_16bit_fantasy_world_trans_1842: 840094024
       oryx_16bit_fantasy_world_trans_1078: -1027454711
       oryx_16bit_fantasy_world_trans_1737: -1811095316
       oryx_16bit_fantasy_world_trans_524: -1536697893
@@ -38591,6 +39666,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_359: 105823193
       oryx_16bit_fantasy_world_trans_181: 2034004148
       oryx_16bit_fantasy_world_trans_620: 808544310
+      oryx_16bit_fantasy_world_trans_1838: 544153020
       oryx_16bit_fantasy_world_trans_672: 1136955679
       oryx_16bit_fantasy_world_trans_748: 396865718
       oryx_16bit_fantasy_world_trans_72: -838162083
@@ -38605,6 +39681,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1181: -499406376
       oryx_16bit_fantasy_world_trans_1094: 950972467
       oryx_16bit_fantasy_world_trans_563: -949014875
+      oryx_16bit_fantasy_world_trans_1817: 84929446
       oryx_16bit_fantasy_world_trans_1366: 2122201614
       oryx_16bit_fantasy_world_trans_334: 552820357
       oryx_16bit_fantasy_world_trans_1535: -203206060
@@ -38634,6 +39711,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_560: 1050804432
       oryx_16bit_fantasy_world_trans_1712: -841213935
       oryx_16bit_fantasy_world_trans_817: 1159292489
+      oryx_16bit_fantasy_world_trans_1812: -889907086
       oryx_16bit_fantasy_world_trans_468: -676589898
       oryx_16bit_fantasy_world_trans_1684: 624882212
       oryx_16bit_fantasy_world_trans_46: -1388422442
@@ -38664,6 +39742,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1381: 157740927
       oryx_16bit_fantasy_world_trans_1513: 584326584
       oryx_16bit_fantasy_world_trans_1772: -1627627586
+      oryx_16bit_fantasy_world_trans_1815: -2047028347
       oryx_16bit_fantasy_world_trans_1558: 767709351
       oryx_16bit_fantasy_world_trans_869: -1090765461
       oryx_16bit_fantasy_world_trans_372: 1125999934
@@ -38711,6 +39790,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1748: 740983225
       oryx_16bit_fantasy_world_trans_657: -260075314
       oryx_16bit_fantasy_world_trans_199: -1404163148
+      oryx_16bit_fantasy_world_trans_1814: 690656231
       oryx_16bit_fantasy_world_trans_1406: 1748518142
       oryx_16bit_fantasy_world_trans_569: 1189307138
       oryx_16bit_fantasy_world_trans_1689: 1644380138
@@ -38809,6 +39889,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_246: -1609121850
       oryx_16bit_fantasy_world_trans_1336: 306904080
       oryx_16bit_fantasy_world_trans_1769: 1254122902
+      oryx_16bit_fantasy_world_trans_1841: -1647332100
       oryx_16bit_fantasy_world_trans_1588: 2042912542
       oryx_16bit_fantasy_world_trans_1488: -604639324
       oryx_16bit_fantasy_world_trans_1770: -1738132486
@@ -38817,6 +39898,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_593: 640518047
       oryx_16bit_fantasy_world_trans_786: -1239142078
       oryx_16bit_fantasy_world_trans_772: 1105804442
+      oryx_16bit_fantasy_world_trans_1824: -934624981
       oryx_16bit_fantasy_world_trans_1211: 609223300
       oryx_16bit_fantasy_world_trans_661: -367509870
       oryx_16bit_fantasy_world_trans_975: -995472321
@@ -38850,6 +39932,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1616: -1496689669
       oryx_16bit_fantasy_world_trans_631: 332275737
       oryx_16bit_fantasy_world_trans_1148: -1117714147
+      oryx_16bit_fantasy_world_trans_1826: -1093962839
       oryx_16bit_fantasy_world_trans_1322: 1388871657
       oryx_16bit_fantasy_world_trans_1398: 204205345
       oryx_16bit_fantasy_world_trans_55: 529949382
@@ -38859,6 +39942,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_498: -1705428640
       oryx_16bit_fantasy_world_trans_1395: -447195448
       oryx_16bit_fantasy_world_trans_258: 400344020
+      oryx_16bit_fantasy_world_trans_1816: 846399905
       oryx_16bit_fantasy_world_trans_874: -1135916015
       oryx_16bit_fantasy_world_trans_165: -171518738
       oryx_16bit_fantasy_world_trans_778: -1354574733
@@ -38866,12 +39950,14 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1492: -1489447387
       oryx_16bit_fantasy_world_trans_374: 149449358
       oryx_16bit_fantasy_world_trans_1534: -71843061
+      oryx_16bit_fantasy_world_trans_1822: 820597055
       oryx_16bit_fantasy_world_trans_433: 821345348
       oryx_16bit_fantasy_world_trans_877: 250655229
       oryx_16bit_fantasy_world_trans_423: -316785932
       oryx_16bit_fantasy_world_trans_674: 647848250
       oryx_16bit_fantasy_world_trans_1036: 1777152093
       oryx_16bit_fantasy_world_trans_1553: -1002116086
+      oryx_16bit_fantasy_world_trans_1846: -318759836
       oryx_16bit_fantasy_world_trans_744: -747834162
       oryx_16bit_fantasy_world_trans_652: -1022922019
       oryx_16bit_fantasy_world_trans_1052: 37630168
@@ -38890,6 +39976,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_947: -985413400
       oryx_16bit_fantasy_world_trans_844: -1299443517
       oryx_16bit_fantasy_world_trans_974: -574371287
+      oryx_16bit_fantasy_world_trans_1820: 1149405247
       oryx_16bit_fantasy_world_trans_692: -661345068
       oryx_16bit_fantasy_world_trans_445: -165511090
       oryx_16bit_fantasy_world_trans_1188: 421036067
@@ -38973,8 +40060,8 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_4: -79071233
       oryx_16bit_fantasy_world_trans_97: -472546588
       oryx_16bit_fantasy_world_trans_90: 698219895
-      oryx_16bit_fantasy_world_trans_1694: -826880715
       oryx_16bit_fantasy_world_trans_978: -613702859
+      oryx_16bit_fantasy_world_trans_1694: -826880715
       oryx_16bit_fantasy_world_trans_1400: -1646525552
       oryx_16bit_fantasy_world_trans_1319: 1496860348
       oryx_16bit_fantasy_world_trans_801: 92377814
@@ -39031,6 +40118,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_863: 1142674276
       oryx_16bit_fantasy_world_trans_1456: 1333522233
       oryx_16bit_fantasy_world_trans_1503: -943432690
+      oryx_16bit_fantasy_world_trans_1832: 2004318617
       oryx_16bit_fantasy_world_trans_435: -1829764866
       oryx_16bit_fantasy_world_trans_1762: -1036348596
       oryx_16bit_fantasy_world_trans_1661: -531225034
@@ -39130,6 +40218,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1655: -1692994545
       oryx_16bit_fantasy_world_trans_363: 441010879
       oryx_16bit_fantasy_world_trans_518: -2021843450
+      oryx_16bit_fantasy_world_trans_1852: 1447628581
       oryx_16bit_fantasy_world_trans_800: 212069933
       oryx_16bit_fantasy_world_trans_1474: 1744721622
       oryx_16bit_fantasy_world_trans_233: -1139035597
@@ -39138,10 +40227,10 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_351: 1143775040
       oryx_16bit_fantasy_world_trans_878: -1573077133
       oryx_16bit_fantasy_world_trans_59: 883923050
-      oryx_16bit_fantasy_world_trans_378: -1870168572
-      oryx_16bit_fantasy_world_trans_1130: -957833123
-      oryx_16bit_fantasy_world_trans_1413: -1118934466
       oryx_16bit_fantasy_world_trans_350: 185643015
+      oryx_16bit_fantasy_world_trans_1130: -957833123
+      oryx_16bit_fantasy_world_trans_378: -1870168572
+      oryx_16bit_fantasy_world_trans_1413: -1118934466
       oryx_16bit_fantasy_world_trans_218: 310892351
       oryx_16bit_fantasy_world_trans_160: -2029713061
       oryx_16bit_fantasy_world_trans_406: 165037083
@@ -39193,11 +40282,11 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_682: -1376984954
       oryx_16bit_fantasy_world_trans_861: 1506121934
       oryx_16bit_fantasy_world_trans_1182: 2023409178
-      oryx_16bit_fantasy_world_trans_814: -1485167502
       oryx_16bit_fantasy_world_trans_1766: 1208073283
+      oryx_16bit_fantasy_world_trans_1788: -2026960325
       oryx_16bit_fantasy_world_trans_1416: 1923919321
       oryx_16bit_fantasy_world_trans_1389: 2095191208
-      oryx_16bit_fantasy_world_trans_1788: -2026960325
+      oryx_16bit_fantasy_world_trans_814: -1485167502
       oryx_16bit_fantasy_world_trans_1003: 1312202787
       oryx_16bit_fantasy_world_trans_1422: 1815122084
       oryx_16bit_fantasy_world_trans_1371: 31383016
@@ -39212,6 +40301,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_382: 1644862333
       oryx_16bit_fantasy_world_trans_1034: 1340270747
       oryx_16bit_fantasy_world_trans_930: -1774176304
+      oryx_16bit_fantasy_world_trans_1819: -1818564606
       oryx_16bit_fantasy_world_trans_1724: 947755396
       oryx_16bit_fantasy_world_trans_478: -1366641365
       oryx_16bit_fantasy_world_trans_1586: 1829558889
@@ -39228,9 +40318,9 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_10: 181760220
       oryx_16bit_fantasy_world_trans_1705: -1731557826
       oryx_16bit_fantasy_world_trans_1613: -1426130370
+      oryx_16bit_fantasy_world_trans_1723: -360186930
       oryx_16bit_fantasy_world_trans_345: 810812135
       oryx_16bit_fantasy_world_trans_1304: 83910277
-      oryx_16bit_fantasy_world_trans_1723: -360186930
       oryx_16bit_fantasy_world_trans_1167: -678915320
       oryx_16bit_fantasy_world_trans_539: -1374179622
       oryx_16bit_fantasy_world_trans_1710: 900146417
@@ -39251,6 +40341,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_117: -1009983684
       oryx_16bit_fantasy_world_trans_1703: 674157010
       oryx_16bit_fantasy_world_trans_1529: -102964221
+      oryx_16bit_fantasy_world_trans_1829: 1568112355
       oryx_16bit_fantasy_world_trans_658: 495950495
       oryx_16bit_fantasy_world_trans_309: -396611762
       oryx_16bit_fantasy_world_trans_115: -1385374498
@@ -39275,6 +40366,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1465: -199358370
       oryx_16bit_fantasy_world_trans_1622: 513004222
       oryx_16bit_fantasy_world_trans_597: -1792074964
+      oryx_16bit_fantasy_world_trans_1827: -1397604172
       oryx_16bit_fantasy_world_trans_1563: 1616710711
       oryx_16bit_fantasy_world_trans_736: -862568710
       oryx_16bit_fantasy_world_trans_865: -201067954
@@ -39357,9 +40449,9 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1268: 1997056429
       oryx_16bit_fantasy_world_trans_637: 1270160904
       oryx_16bit_fantasy_world_trans_138: -2029298298
+      oryx_16bit_fantasy_world_trans_1472: -1455589086
       oryx_16bit_fantasy_world_trans_764: -961633664
       oryx_16bit_fantasy_world_trans_1329: 1844692745
-      oryx_16bit_fantasy_world_trans_1472: -1455589086
       oryx_16bit_fantasy_world_trans_340: 1257320863
       oryx_16bit_fantasy_world_trans_412: -927420716
       oryx_16bit_fantasy_world_trans_388: 403105117
@@ -39378,6 +40470,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1732: -677920985
       oryx_16bit_fantasy_world_trans_1120: -28737324
       oryx_16bit_fantasy_world_trans_733: 675265732
+      oryx_16bit_fantasy_world_trans_1828: 1910146700
       oryx_16bit_fantasy_world_trans_852: 1742514335
       oryx_16bit_fantasy_world_trans_671: 8011379
       oryx_16bit_fantasy_world_trans_1509: 941691822
@@ -39417,6 +40510,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1530: -1581037240
       oryx_16bit_fantasy_world_trans_1754: -491109828
       oryx_16bit_fantasy_world_trans_212: 1010360960
+      oryx_16bit_fantasy_world_trans_1850: -1748214126
       oryx_16bit_fantasy_world_trans_747: 1610965951
       oryx_16bit_fantasy_world_trans_906: 239014879
       oryx_16bit_fantasy_world_trans_594: -1968496489
@@ -39426,6 +40520,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_190: 1940254448
       oryx_16bit_fantasy_world_trans_336: -685527767
       oryx_16bit_fantasy_world_trans_1247: -51881525
+      oryx_16bit_fantasy_world_trans_1836: -600442350
       oryx_16bit_fantasy_world_trans_1794: 48938472
       oryx_16bit_fantasy_world_trans_1449: 26140900
       oryx_16bit_fantasy_world_trans_252: 404346304
@@ -39435,6 +40530,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1734: 165480243
       oryx_16bit_fantasy_world_trans_242: -1469849060
       oryx_16bit_fantasy_world_trans_1521: -1738692679
+      oryx_16bit_fantasy_world_trans_1839: 576257269
       oryx_16bit_fantasy_world_trans_578: -354537748
       oryx_16bit_fantasy_world_trans_28: 1517286237
       oryx_16bit_fantasy_world_trans_1050: -1263308548
@@ -39447,6 +40543,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_18: 1797165635
       oryx_16bit_fantasy_world_trans_379: 254869866
       oryx_16bit_fantasy_world_trans_562: -1819061073
+      oryx_16bit_fantasy_world_trans_1823: 1444773204
       oryx_16bit_fantasy_world_trans_278: 1149381144
       oryx_16bit_fantasy_world_trans_1044: -1039599550
       oryx_16bit_fantasy_world_trans_1549: -1790931003
@@ -39613,6 +40710,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1189: 1961080867
       oryx_16bit_fantasy_world_trans_1649: -261330105
       oryx_16bit_fantasy_world_trans_1544: -1508627667
+      oryx_16bit_fantasy_world_trans_1831: 1056129057
       oryx_16bit_fantasy_world_trans_438: 285107980
       oryx_16bit_fantasy_world_trans_1361: 836347984
       oryx_16bit_fantasy_world_trans_1522: -1013769497
@@ -39621,6 +40719,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1396: -1494985366
       oryx_16bit_fantasy_world_trans_48: 1999357860
       oryx_16bit_fantasy_world_trans_635: -1547702663
+      oryx_16bit_fantasy_world_trans_1847: -223480207
       oryx_16bit_fantasy_world_trans_82: -209005514
       oryx_16bit_fantasy_world_trans_1038: 931903426
       oryx_16bit_fantasy_world_trans_1776: 520244830
@@ -39690,6 +40789,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_927: 2019373782
       oryx_16bit_fantasy_world_trans_1379: 1366478064
       oryx_16bit_fantasy_world_trans_945: -944878148
+      oryx_16bit_fantasy_world_trans_1851: -391310663
       oryx_16bit_fantasy_world_trans_269: 339601058
       oryx_16bit_fantasy_world_trans_1606: 441189989
       oryx_16bit_fantasy_world_trans_1027: 1051296944
@@ -39701,6 +40801,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1602: 1515448696
       oryx_16bit_fantasy_world_trans_1582: -1351356738
       oryx_16bit_fantasy_world_trans_475: 1088595902
+      oryx_16bit_fantasy_world_trans_1853: -247347864
       oryx_16bit_fantasy_world_trans_198: 1211999735
       oryx_16bit_fantasy_world_trans_958: 591174802
       oryx_16bit_fantasy_world_trans_71: -1866931324
@@ -39731,6 +40832,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_536: 194627108
       oryx_16bit_fantasy_world_trans_815: 293409940
       oryx_16bit_fantasy_world_trans_808: -993971759
+      oryx_16bit_fantasy_world_trans_1830: 1271217144
       oryx_16bit_fantasy_world_trans_1642: -1982682485
       oryx_16bit_fantasy_world_trans_589: 834812462
       oryx_16bit_fantasy_world_trans_1733: 1022099345
@@ -39744,6 +40846,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_840: 363362992
       oryx_16bit_fantasy_world_trans_1184: -1095558088
       oryx_16bit_fantasy_world_trans_323: 910363965
+      oryx_16bit_fantasy_world_trans_1835: -1937961955
       oryx_16bit_fantasy_world_trans_62: 177258394
       oryx_16bit_fantasy_world_trans_1128: -545736041
       oryx_16bit_fantasy_world_trans_356: 615421627
@@ -39823,6 +40926,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_622: 1006590753
       oryx_16bit_fantasy_world_trans_185: -500967585
       oryx_16bit_fantasy_world_trans_1577: 627811421
+      oryx_16bit_fantasy_world_trans_1844: -1743273500
       oryx_16bit_fantasy_world_trans_1454: 2081130459
       oryx_16bit_fantasy_world_trans_424: -1204903235
       oryx_16bit_fantasy_world_trans_887: 147765575
@@ -39835,7 +40939,7 @@ TextureImporter:
       oryx_16bit_fantasy_world_trans_1774: 922656929
       oryx_16bit_fantasy_world_trans_331: 1755937329
       oryx_16bit_fantasy_world_trans_308: 1046170584
-      oryx_16bit_fantasy_world_trans_760: 1252448696
+      oryx_16bit_fantasy_world_trans_161: -798326417
       oryx_16bit_fantasy_world_trans_1109: 2061932410
       oryx_16bit_fantasy_world_trans_567: -931552625
   spritePackingTag: 

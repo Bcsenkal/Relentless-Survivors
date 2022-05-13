@@ -6,18 +6,16 @@ using UnityEngine.UI;
 public class TowerSelectorButton : ButtonBase
 {
     [SerializeField]private GameObject towerPrefab;
-    private GameUI gameUI;
     private Tower tower;
     
     protected override void Awake()
     {
         tower = towerPrefab.GetComponent<Tower>();
         gameObject.GetComponent<Button>().onClick.AddListener(delegate {BuildTower();});
-        gameUI = FindObjectOfType<GameUI>();
         base.Awake();
     }
 
-    protected override void Update() 
+    protected override void Update()
     {
         base.Update();
         PriceCheck();
@@ -33,13 +31,13 @@ public class TowerSelectorButton : ButtonBase
         }
         var buildingTower = Instantiate(towerPrefab,currentSpot.transform.position,Quaternion.identity);
         currentSpot.GetComponent<TowerSpot>().SetCurrentTowerType(buildingTower);
-        gameUI.SpendCoin(tower.Price);
+        GameManager.instance.gameUI.SpendCoin(tower.Price);
         AuraManager.AddTower((ITower)buildingTower.GetComponent<Tower>());
     }
     //Pricecheck for tower purchase
     private void PriceCheck()
     {
-        if(gameUI.GetCurrentCoin() >= tower.Price)
+        if(GameManager.instance.gameUI.GetCurrentCoin() >= tower.Price)
         {
             gameObject.GetComponent<Button>().interactable = true;
         }
