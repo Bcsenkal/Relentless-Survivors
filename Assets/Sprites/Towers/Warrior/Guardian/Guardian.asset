@@ -18,3 +18,6 @@ MonoBehaviour:
   towerSpeed: 1.6
   towerDamage: 12
   towerRange: 2.5
+  buffInfo: 
+  towerProjectileType: {fileID: 1554868488090210731, guid: 8040333c99a5d5c4b8ca2478a8eaf42a, type: 3}
+  isTowerAuraProvider: 0
