@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
 {
@@ -17,7 +19,7 @@ public abstract class Enemy : MonoBehaviour, IFlippable, IDamageable
     [SerializeField]protected float slowDuration;
     protected float slowMultiplier = 2f;
     protected GameObject healthBar;
-    //Gets current path info from WaypointManager, healhbar child to visualize damage
+    //Gets current path info from WaypointManager, healthbar child to visualize damage
     private void Awake()
     {
         currentPath = WaypointManager.instance.currentPath;

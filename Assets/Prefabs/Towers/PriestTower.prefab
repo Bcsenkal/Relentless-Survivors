@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 980282855
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 760fbc163a8759a4eb83aa31cab82f01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -132,13 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2250549529f2d5f4a96afede90c316e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerData: {fileID: 11400000, guid: 0514bf6ddec259d4e93a42a7f34b2971, type: 2}
   <CurrentAuras>k__BackingField: []
-  <Price>k__BackingField: 45
-  <Speed>k__BackingField: 1
-  <Damage>k__BackingField: 2
-  <Range>k__BackingField: 5
-  <ProjectileType>k__BackingField: {fileID: 1554868488090210731, guid: f45621c901c3c9f47be2b424b3648c85, type: 3}
-  <AttackTimer>k__BackingField: 0
-  <IsAuraProvider>k__BackingField: 1
   <AuraType>k__BackingField: Speed
   speedMultiplier: 1.5

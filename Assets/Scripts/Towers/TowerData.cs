@@ -11,4 +11,6 @@ public class TowerData : ScriptableObject
     public int towerDamage;
     public float towerRange;
     public string buffInfo;
+    public GameObject towerProjectileType;
+    public bool isTowerAuraProvider;
 }

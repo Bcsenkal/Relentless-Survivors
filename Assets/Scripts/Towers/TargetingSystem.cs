@@ -9,7 +9,7 @@ public class TargetingSystem : MonoBehaviour
     private Tower tower;
     public GameObject currentTarget;
     
-    private void Awake()
+    private void Start()
     {
         tower = GetComponent<Tower>();
         range = tower.Range;

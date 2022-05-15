@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour, IFlippable, ITower
 {
+    [SerializeField]private TowerData towerData;
     [field: SerializeField]public List<string> CurrentAuras{get; set;}
-    [field: SerializeField]public int Price{get; set;}
-    [field: SerializeField]public float Speed{get; set;}
-    [field: SerializeField]public int Damage{get; set;}
-    [field: SerializeField]public float Range{get; set;}
+    public int Price{get; set;}
+    public float Speed{get; set;}
+    public int Damage{get; set;}
+    public float Range{get; set;}
     [field: SerializeField]public GameObject ProjectileType{get; set;}
     [field: SerializeField]public float AttackTimer{get; set;}
-    [field: SerializeField]public bool IsAuraProvider{get; set;}
-    protected float auraSpeedMultiplier = 1.4f;
+    public bool IsAuraProvider{get; set;}
     protected GameObject currentTarget;
+    protected void OnEnable() {
+        GetData();
+    }
     protected virtual void Update() 
     {
         FlipSprite();
@@ -64,5 +67,14 @@ public class Tower : MonoBehaviour, IFlippable, ITower
         {
             gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
+    }
+    protected void GetData()
+    {
+        Price = towerData.towerPrice;
+        Damage = towerData.towerDamage;
+        Range = towerData.towerRange;
+        Speed = towerData.towerSpeed;
+        ProjectileType = towerData.towerProjectileType;
+        IsAuraProvider = towerData.isTowerAuraProvider;
     }
 }

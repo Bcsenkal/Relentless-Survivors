@@ -9,7 +9,7 @@ public class WaveSpawner : MonoBehaviour
     private int currentWave = 0;
     private float spawnInterval = 0.7f;
     private float timeBetweenWaves = 8f;
-    private float initialDelay = 1f;
+    private float initialDelay = 3f;
 
     private void OnEnable()
     {
